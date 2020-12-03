@@ -1,5 +1,26 @@
 
 
+@font-face {
+    font-family: 'Gotham'; /*a name to be used later*/
+    src: url('../fonts/Gotham/Gotham-Book.otf'); /*URL to font*/
+    font-weight: normal;
+    font-display: 'swap';
+}
+
+@font-face {
+    font-family: 'Gotham'; /*a name to be used later*/
+    src: url('../fonts/Gotham/Gotham-Medium.otf'); /*URL to font*/
+    font-weight: 500;
+    font-display: 'swap';
+}
+
+@font-face {
+    font-family: 'Gotham'; /*a name to be used later*/
+    src: url('../fonts/Gotham/Gotham\ Bold.otf'); /*URL to font*/
+    font-weight: bold;
+    font-display: 'swap';
+}
+
 :root{
     --dark-color: #000000;
     --primary-color:  #004777;
@@ -7,7 +28,7 @@
     --maroon-color: #A30000;
     --tomato-color:  #EA3546;;
   
-    --main-font-family: "Public Sans", Helvetica, Arial, sans-serif;
+    --main-font-family: "Gotham","Public Sans", Helvetica, Arial, sans-serif;
     --alt-font-family: "Public Sans", Helvetica, Arial, sans-serif;
   
    /* sizes 80,         24,18,14*/
@@ -54,6 +75,7 @@ body{
     position: absolute;
     top: 2vh;
     left: 44vw;
+    width: 10.14vw
 }
 
 .navbar{
