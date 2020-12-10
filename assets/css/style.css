@@ -26,7 +26,9 @@
     --primary-color:  #004777;
     --secondary-color: #FF7700;
     --maroon-color: #A30000;
-    --tomato-color:  #EA3546;;
+    --tomato:  #EA3546;
+    --yellow: #EFC111;
+
   
     --main-font-family: "Gotham","Public Sans", Helvetica, Arial, sans-serif;
     --alt-font-family: "Public Sans", Helvetica, Arial, sans-serif;
@@ -75,13 +77,15 @@ body{
     position: absolute;
     top: 2vh;
     left: 44vw;
-    width: 10.14vw
+    width: 10.14vw;
+    z-index: 101;
 }
 
 .navbar{
     position: absolute;
     width: 100%;
     z-index: 100;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0) 8.84%, rgba(24, 24, 24, 0.8) 91.14%);
 }
 
 .navbar-nav{
@@ -127,18 +131,70 @@ border-radius: 2px;
  text-transform: uppercase;
 }
 
+.submit-btn{
+    margin-top:3vh;
+    padding: 1.8vh 6.25vw;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+.pro-header{
+    background: url(../img/bg3.jpg), url(../img/bg1.jpg), url(../img/bg2.jpg), url(../img/bg-s.jpg) ;
+    background-position: right, top left, bottom left, left;
+    background-size: 45.35% 100%,54.65% 28%, 54.65% 37.3%, 54.65%;
+   background-repeat: no-repeat; 
+    min-height: 750px;
+    height: 100vh;
+    max-height: 1080px;
+    color: #FFFFFF;
+    }
+
+.hero-container{
+    height: 100%;
+    position: relative;
+    overflow: hidden;  
+}
+.hero-title{
+    font-weight: 700;
+    margin-bottom:1.84vh;
+}
+
+.hero-title span{
+    color: var(--secondary-color)
+}
+
+
 .hero-section-one{
 width: 54.65vw;
 }
 
 .hero-block{
-    background-color: var(--tomato-color);
+    background-color: var(--tomato);
     padding: 5.2vh 8.33vw ;
     margin-top: 30%;
+    width: 100%;
+    position: relative;
 }
 
+.hero-content-one{
+
+}
+
+.hero-content-two{
+opacity: 0;
+position: absolute;
+top: 0;
+display: none;
+}
+
+
 .hero-base{
-    padding-top: 5.6vh;
+    display: flex;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 8.84%, #181818 91.14%);
+    position: absolute;
+    bottom: 0;
+    padding: 10vh 0 4vh ;
 }
 
 .circle-block{
@@ -154,30 +210,33 @@ width: 54.65vw;
 
 
 
-.pro-header{
-    background: url(../img/bg3.jpg), url(../img/bg1.jpg), url(../img/bg2.jpg);
-    background-position: right, top left, bottom left;
-    background-size: 45.35% 100%,54.65% 28%, 54.65% 37.3%;
-   background-repeat: no-repeat; 
-    min-height: 750px;
-    height: 100vh;
-    max-height: 1080px;
-    color: #FFFFFF;
-    }
 
-.hero-container{
-    /* padding:  4vh 0 23.85vh; */
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 8.84%, #181818 91.14%);
-}
-.hero-title{
-    font-weight: 700;
-    margin-bottom:1.84vh;
-}
 
-.hero-title span{
-    color: var(--secondary-color)
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .signup{
@@ -294,13 +353,6 @@ label{
     font-size: var(--body-text);
 }
 
-.submit-btn{
-    border-radius: max(0.833vw, 6px);
-    margin-top:7vh;
-    padding: 1.8vh 6.25vw;
-    text-transform: uppercase;
-    width: 100%;
-}
 
 .invalid-feedback{
     color: #FFA07A;
