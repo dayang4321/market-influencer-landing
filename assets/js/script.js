@@ -1,30 +1,24 @@
 
 
-// gsap.registerEffect({
-//     name: "anim1",
-//     effect: (targets, config) => {
-//       return gsap.to(targets, {
-//         duration: config.duration, opacity: 0,
-//         onComplete: () => {
-//           $(targets).attr("src", "/assets/img/svg/naira.svg");
-//           gsap.to(targets,{duration:1, opacity: 1})
-//         }, ...config
-//       });
-     
-//     },
-//     defaults: {duration: 2}, //defaults get applied to any "config" object passed to the effect
-//     extendTimeline: true, //now you can call the effect directly on any GSAP timeline to have the result immediately inserted in the position you define (default is sequenced at the end)
-//   });
-  
-  //gsap.effects.fade(".box");
-  
-//       let timeline = gsap.timeline()
-//   timeline.am('.pos1', { duration: 2, delay: 5, })
+  $('.cd100').countdown100({
+    /*Set Endtime here*/
+    /*Endtime must be > current time*/
+    endtimeYear: 2020,
+    endtimeMonth: 12,
+    endtimeDate: 19,
+    endtimeHours: 9,
+    endtimeMinutes: 0,
+    endtimeSeconds: 0,
+    timeZone: "Africa/Lagos" 
+    // ex:  timeZone: "America/New_York"
+    //go to " http://momentjs.com/timezone/ " to get timezone
+  });
+
 
   //create a timeline instance
 var tl = gsap.timeline({
  paused:true,
-  defaults: { duration: 3, ease: "power2.out" }
+  defaults: { duration: 0.8, ease: "power2.out" }
 });
 
 //the following two lines do the SAME thing:
@@ -35,13 +29,17 @@ tl.addLabel("scene1")
   .to(".hero-content-one", { opacity: 0, display: 'none', position: 'absolute' }, "scene1")
   .to(".hero-content-two", { opacity: 1, display: 'block', position: 'static', padding: '12.13vh 0 0 0', }, "scene1")
   .to(".hero-base", { yPercent: 100, onComplete: () => { $('.hero-base').hide() } }, "scene1")
+  .to(".hero-content-three", { opacity: 0,}, "scene1")
   .addLabel("scene2")
   .to(".hero-section-one", { x: '0vw', width: '100vw', height: '34.8vh', position: 'absolute', bottom: 0 }, "scene2")
-  .to(".hero-block", { marginTop: 0, height: '100%', backgroundColor: '#17C7FF', boxShadow: 'none', }, "scene2")
-  .to(".hero-content-two", { opacity: 0, display: 'none', }, "scene2")
+  .to(".hero-block", { marginTop: 0, height: '100%', backgroundColor: '#17C7FF', boxShadow: 'none', padding: '3.7vh 8.33vw' }, "scene2")
+  .to(".hero-content-two", { opacity: 0, display: 'none', position:'absolute'}, "scene2")
   .to(".hero-content-three", { opacity: 1, display: 'block', position: 'static', }, "scene2")
   .addLabel("scene3")
-
+  .to(".hero-section-one", { x: '0vw', width: '54.64vw', height: 'unset', top: 0}, "scene3")
+  .to(".hero-block", {backgroundColor: '#F86624', padding: '5.2vh 8.33vw', marginTop: '30%', width: '100%', height: 'unset', position: 'relative'},"scene3")
+  .to(".hero-content-three", { opacity: 0, display: 'none', position: 'absolute', }, "scene3")
+  .to(".hero-content-four", {opacity: 1, display: 'block', position: 'static', }, "scene3")
   .addLabel("scene4");
 
 
@@ -64,7 +62,7 @@ $('#secondResume').click((event) => {
 
 $('#thirdResume').click((event) => {
   event.preventDefault()
-  var tween3 = tl.tweenFromTo("scene3", 0);
-  //console.log(tween2)
+  var tween3 = tl.tweenFromTo("scene3", "scene4");
+  console.log(tween3)
 })
 

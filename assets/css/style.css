@@ -177,9 +177,6 @@ width: 54.65vw;
     position: relative;
 }
 
-.hero-content-one{
-
-}
 
 .hero-content-two{
 opacity: 0;
@@ -189,6 +186,13 @@ display: none;
 }
 
 .hero-content-three{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.hero-content-four{
     opacity: 0;
     position: absolute;
     top: 0;
@@ -253,7 +257,14 @@ label{
     margin: 0 4vw;
 }
 
+.hero-content-three > .hero-title{
+    margin: 0.5vh;
+}
 
+.social-check ~ .submit-btn{
+   width: 26.875vw;
+   margin: 0.5vh;
+}
 
 
 label>img {
@@ -308,6 +319,26 @@ label>img {
 }
 
 
+.clock{
+    font-size: min(max(56px, 5vw), 80px);
+    
+}
+
+.clock-slot{
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.clock-slot label {
+    font-family: var(--alt-font-family);
+font-size: 11px;
+text-align: center;
+}
+
+.clock-slot > span {
+    font-weight: 300;
+    letter-spacing: -0.055em;
+}
 
 
 
