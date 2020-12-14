@@ -7,10 +7,10 @@
    //the following two lines do the SAME thing:
    // tl.add( gsap.to("#id", {duration: 2, x: 100}) );
    tl.addLabel("scene1")
-     .to(".hero-section-one", { top: 0, x: '54.65vw', width: '45.35vw', height: '100%' }, "scene1")
+     .to(".hero-section-one", { top: 0, x: '54vw', width: '45.35vw', height: '100%' }, "scene1")
      .to(".hero-block", { height: '100%', backgroundColor: '#EFC111', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', }, "scene1")
      .to(".hero-content-one", { opacity: 0, display: 'none', position: 'absolute' }, "scene1")
-     .to(".hero-content-two", { opacity: 1, display: 'block', position: 'static', padding: '7.13vh 0 0 0', }, "scene1")
+     .to(".hero-content-two", { opacity: 1, display: 'block', position: 'static', padding: '7.2vw 0 0 0', }, "scene1")
      .to(".hero-base", { yPercent: 100, onComplete: () => { $('.hero-base').hide() } }, "scene1")
      .to(".hero-content-three", { opacity: 0, }, "scene1")
      .to(".logo path:last-of-type", { fill: '#EFC111',}, "scene1")
