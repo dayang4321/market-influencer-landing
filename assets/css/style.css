@@ -1,4 +1,4 @@
-
+c
 
 @font-face {
     font-family: 'Gotham'; /*a name to be used later*/
@@ -76,7 +76,7 @@ body{
 .logo{
     position: absolute;
     top: 2vh;
-    left: 44vw;
+    left: 46vw;
     width: 10.14vw;
     z-index: 101;
 }
@@ -140,14 +140,16 @@ border-radius: 2px;
 
 
 .pro-header{
-    background: url(../img/bg3.jpg), url(../img/bg1.jpg), url(../img/bg2.jpg), url(../img/bg-s.jpg) ;
+    /* background: url(../img/bg3.jpg), url(../img/bg1.jpg), url(../img/bg2.jpg), url(../img/bg-s.jpg) ;
     background-position: right, top left, bottom left, 0% 43.5%;
-    background-size: 45.35% 100%,54.65% 26.86%, 54.65% 34.76%, 54.65% 38.3%;
+    background-size: 45.35% 100%,54.65% 26.86%, 54.65% 34.76%, 54.65% 38.3%; */
+
+    background-image: url(../img/Group\ 11-min.png);
+    background-size: 100% auto;
    background-repeat: no-repeat; 
-    min-height: 900px;
-    height: 100vh;
-    max-height: 1080px;
+    height: 73vw;
     color: #FFFFFF;
+    position: relative;
     }
 
 .hero-container{
@@ -167,14 +169,18 @@ border-radius: 2px;
 
 .hero-section-one{
 width: 54.65vw;
+position: absolute;
+top: 26.5%;
+height: 37.7%;
 }
 
 .hero-block{
     background-color: var(--tomato);
     padding: 5.2vh 8.33vw ;
-    margin-top: 27%;
+    /* margin-top: 27%; */
     width: 100%;
     position: relative;
+    height: 100%;
 }
 
 
