@@ -34,7 +34,7 @@
    //   {paused:true}
    // );
 
-   tl.tweenTo("scene4")
+   //tl.tweenTo("scene4")
    
    $('#firstResume').click(() => {
      //tl.tweenTo("scene2")
