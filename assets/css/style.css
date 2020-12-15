@@ -131,7 +131,7 @@ border-radius: 2px;
 }
 
 .submit-btn{
-    margin-top:2.5vw;
+    margin-top:2.5vh;
     padding: 1.8vh 6.25vw;
     text-transform: uppercase;
     width: 100%;
@@ -171,6 +171,10 @@ width: 54.65vw;
 position: absolute;
 top: 26.5%;
 height: 37.7%;
+}
+
+.hero-content-one .hero-title {
+    margin-bottom:3.84vh;
 }
 
 .hero-block{
@@ -226,7 +230,7 @@ display: none;
 
 
 .form-group{
-    margin-bottom: 1.5vw;
+    margin-bottom: 1vh;
 }
 
 
