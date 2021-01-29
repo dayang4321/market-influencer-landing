@@ -27,16 +27,19 @@
     --maroon-color: #A30000;
     --tomato:  #EA3546;
     --yellow: #EFC111;
+    --green:  #61BB5A;
 
   
     --main-font-family: "Gotham","Public Sans", Helvetica, Arial, sans-serif;
     --alt-font-family: "Public Sans", Helvetica, Arial, sans-serif;
   
    /* sizes 80,         24,18,14*/
-    --h1-font-size: min(max(27.5px, 3.82vw), 110px);
-    /* --h2-font-size: min(max(24px, 2.5vw), 96px); */
-    --h3-font-size: min(max(20px, 1.875vw), 72px);
-  
+    --h1-fs: 3.4375rem;
+    --h2-fs: 3rem;
+    --h3-fs: 2.25rem;
+    --h4-fs: 2rem;
+
+    --small-text: 0.875rem;
     --big-text: min(max(11.5px, 1.46vw), 42px);
     --body-text: min(max(14px, 1.25vw), 36px);
     --link-text: min(max(10px, 0.98vw), 28px);
@@ -44,7 +47,46 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    color: #FFFFFF;
+    font-family: var(--main-font-family);
+    font-weight: 500;
+}
+
+
+h1{
+    font-size: var(--h1-fs);
+    line-height: 1.11;
+    letter-spacing: -0.05rem;
+    font-weight: 700;
+}
+
+h2{
+    font-size: var(--h2-fs);
+    line-height: 1.1;
+    letter-spacing: -0.03rem;
+}
+h3{
+    font-size: var(--h3-fs);
+    line-height: 1.16;
+    letter-spacing: -0.03rem;
+}
+
+h4{
+    font-size: var(--h4-fs);
+    line-height: 1.16;
+    letter-spacing: -0.05rem;
+}
+
 
 a{
     color: #FFFFFF;
@@ -56,20 +98,10 @@ a:hover{
     text-decoration: none;
 } 
 
-h1{
-    font-size: var(--h1-font-size);
-    line-height: 1.17;
-    letter-spacing: -0.05em;
-}
 
-html{
-    scroll-behavior: smooth;
-}
 
-body{
-    color: #FFFFFF;
-    font-family: var(--main-font-family);
-    font-weight: 500;
+.alt-font{
+    font-family: var(--alt-font-family);
 }
 
 .logo{
@@ -106,7 +138,6 @@ body{
     border: 5px solid #FFFFFF;
 box-sizing: border-box;
 border-radius: 2px;
-    color: #FFFFFF;
     font-weight: 700;
     font-size: var(--body-text);
     background-color: transparent;
@@ -125,17 +156,28 @@ border-radius: 2px;
     line-height: 1.17;
 }
 
+.small-text{
+font-size: var(--small-text) ;
+font-family: var(--alt-font-family);
+font-weight: 600;
+line-height: 1.143;
+letter-spacing: -0.05rem;
+}
+
 .cta-btn{
  padding: 1.94vh 5vw;
  text-transform: uppercase;
 }
 
-.submit-btn{
-    margin-top:2.5vh;
-    padding: 1.8vh 6.25vw;
-    text-transform: uppercase;
-    width: 100%;
+
+
+.yellow-text, .yellow-text:hover{
+    color: var(--yellow);
 }
+.tomato-text, .tomato-text:hover{
+    color: var(--tomato);
+}
+
 
 
 .pro-header{
@@ -143,10 +185,11 @@ border-radius: 2px;
     background-position: right, top left, bottom left, 0% 43.5%;
     background-size: 45.35% 100%,54.65% 26.86%, 54.65% 34.76%, 54.65% 38.3%; */
 
-    background-image: url(../img/Group\ 11-min.png);
-    background-size: 100% auto;
+    background-image: url(../img/new-bg.png);
+    background-size: 100% 100%;
    background-repeat: no-repeat; 
-    height: 73vw;
+    height: 54.58333vw;
+    min-height: 100vh;
     color: #FFFFFF;
     position: relative;
     }
@@ -167,10 +210,20 @@ border-radius: 2px;
 
 
 .hero-section-one{
-width: 54.65vw;
+width: 58.177vw;
 position: absolute;
 top: 26.5%;
-height: 37.7%;
+height: 100%;
+}
+
+.hero-circles{
+    margin: 0 -2.3875rem; 
+}
+
+.circle-block{
+    max-width: 12.5vw ;
+    margin: 0 2.3875rem;
+    
 }
 
 .hero-content-one .hero-title {
@@ -184,6 +237,9 @@ height: 37.7%;
     width: 100%;
     position: relative;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+   
 }
 
 
@@ -217,41 +273,65 @@ display: none;
     padding: 10vh 0 4vh ;
 }
 
-.circle-block{
-    max-width: 12.5vw ;
-    margin: 0 5.9vw;
-    
-}
+
 
 .circle-case{
     margin-bottom:1.84vh;
 }
 
-
-
-.form-group{
-    margin-bottom: 1vh;
+.form-row{
+    align-items: flex-end;
 }
 
+.form-group{
+    margin-top: 1rem
+}
 
 label{
-    font-size: var(--body-text);
+    font-size: 1.125rem;
     display: block;
-    white-space: nowrap;
+    font-weight: 500;
 }
 
 .form-control {
     width: 100%;
     height: unset;
-    padding: 1.7vh 2vw;
-    font-size: var(--big-text);
+    padding: 0.75rem 1.5rem;
     font-weight: 500;
     line-height: 1.16;
-    color: #000000;
-    border: 1px solid #ced4da;
-    border-radius: max(0.833vw, 6px);
+    color: #fff;
+    border: 5px solid #fff;
+    border-radius: 5px;
+    background-color: transparent;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+
+
+.form-control::placeholder{
+    color: #fff;
+    font-style: italic;
+    font-family: var(--alt-font-family);
+    font-size: var(--small-text);
+}
+
+.form-control:focus{
+    background-color: transparent;
+    color: #fff;
+    border-color: #fff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(255, 255, 255, 0.9);
+}
+
+.submit-btn{
+    background: #FFFFFF;
+    padding:0.75rem;
+    text-transform: capitalize;
+    width: 100%;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+
 
 .invalid-feedback{
     color: var(--tomato);
