@@ -50,7 +50,7 @@ gsap.registerPlugin(ScrollToPlugin);
    //   {paused:true}
    // );
 
-   tl.tweenTo("scene4")
+   //tl.tweenTo("scene4")
    
    $('#firstResume').click(() => {
      //tl.tweenTo("scene2")
@@ -64,9 +64,9 @@ gsap.registerPlugin(ScrollToPlugin);
      //console.log(tween2)
    })
    
-  //  $('#thirdResume').click((event) => {
-  //    event.preventDefault()
-  //    var tween3 = tl.tweenFromTo("scene3", "scene4");
-  //    console.log(tween3)
-  //  });
+   $('#thirdResume').click((event) => {
+     event.preventDefault()
+     var tween3 = tl.tweenFromTo("scene3", "scene4");
+     console.log(tween3)
+   });
    
