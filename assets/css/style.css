@@ -40,7 +40,7 @@
     --h4-fs: 2rem;
 
     --small-text: 0.875rem;
-    --big-text: min(max(11.5px, 1.46vw), 42px);
+    --big-text: 1.5rem;
     --body-text: min(max(14px, 1.25vw), 36px);
     --link-text: min(max(10px, 0.98vw), 28px);
 }
@@ -74,11 +74,13 @@ h2{
     font-size: var(--h2-fs);
     line-height: 1.1;
     letter-spacing: -0.03rem;
+    font-weight: 700;
 }
 h3{
     font-size: var(--h3-fs);
     line-height: 1.16;
     letter-spacing: -0.03rem;
+    font-weight: 700;
 }
 
 h4{
@@ -107,9 +109,13 @@ a:hover{
 .logo{
     position: absolute;
     top: 2vh;
-    left: 46vw;
     width: 10.14vw;
+    max-width: 140px;
     z-index: 101;
+    transform: translateX(-50%);
+    position: absolute;
+    top: 2vh;
+    left: 50%;
 }
 
 .navbar{
@@ -154,6 +160,7 @@ border-radius: 2px;
 .big-text{
     font-size: var(--big-text);
     line-height: 1.17;
+    letter-spacing: -0.05em;
 }
 
 .small-text{
@@ -176,6 +183,9 @@ letter-spacing: -0.05rem;
 }
 .tomato-text, .tomato-text:hover{
     color: var(--tomato);
+}
+.green-text, .green-text:hover{
+    color: var(--green);
 }
 
 
@@ -243,36 +253,26 @@ height: 100%;
 }
 
 
-.hero-content-two{
+.hero-content-two,
+.hero-content-three,
+.hero-content-four,
+.hero-content-five{
 opacity: 0;
 position: absolute;
 top: 0;
 display: none;
 }
 
-.hero-content-three{
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    display: none;
+
+
+
+.hero-content-four .signup-form {
+    padding: 0 10rem;
 }
 
-.hero-content-four{
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    display: none;
-}
-
-
-.hero-base{
+.hero-content-four .signup-form .form-group{
     display: flex;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 8.84%, #181818 91.14%);
-    position: absolute;
-    bottom: 0;
-    padding: 10vh 0 4vh ;
 }
-
 
 
 .circle-case{
@@ -284,13 +284,15 @@ display: none;
 }
 
 .form-group{
-    margin-top: 1rem
+    margin-top: 0.5rem
 }
 
 label{
     font-size: 1.125rem;
     display: block;
     font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.167;
 }
 
 .form-control {
