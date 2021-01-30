@@ -96,74 +96,81 @@
     <div class="container-fluid p-0 hero-container">
       <div class="hero-section-one d-flex flex-column align-items-baseline ">
         <div class="hero-block">
-          <div class="hero-content-one">
-            <h2 class="col-8 px-0">Earn Side Income and help grow businesses</h2>
-            <h4 class="alt-font font-weight-normal mb-4 pb-2">Sell products & brands you love, passively</h4>
-            <div class="hero-circles d-flex justify-content-center align-items-center">
-              <div class="circle-block text-center">
-                <div class="circle-case">
-                  <img src="./assets/img/svg/Ellipse 1 (1).svg" alt="circle">
+          <div class="hero-content-one row">
+            <div class="hero-form col-6">
+                
+              <h1 class="px-0">Earn Side Income and help grow businesses</h1>
+              <h4 class="alt-font font-weight-normal mb-4 pb-2">Sell products & brands you love, passively</h4>
+            
+              <form class="signup-form mt-3" novalidate id="signupForm">
+                <div class="form-row">
+                  <div class="form-group px-3 col-md-6">
+                    <label class="sr-only" for="name">Name</label>
+                    <input type="text" class="form-control" required id="name" placeholder="Name">
+                    <div class="invalid-feedback">Please enter your name</div>
+                  </div>
+                  <div class="form-group px-3 col-md-6">
+                    <label class="sr-only" for="email">Email address</label>
+                    <input type="email" class="form-control" required id="email" placeholder="Email address">
+                    <div class="invalid-feedback">Please enter your email address</div>
+                  </div>
+               
                 </div>
-                <p class="small-text">Truly passive (Requires about 5 minutes daily)</p>
-              </div>
-              <div class="circle-block text-center">
-                <div class="circle-case">
-                  <img src="./assets/img/svg/Ellipse 1 (1).svg" alt="circle">
+                <div class="form-row">            
+                  <div class="form-group px-3 col-md-6">
+                    <label class="sr-only" for="phone">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
+                  </div>
+                  <div class="form-group px-3 col-md-6">
+                    <label class="sr-only" for="location">Location</label>
+                    <input type="text" class="form-control" required id="location" placeholder="Location">
+                    <div class="invalid-feedback">Please enter your Location</div>
+                  </div>
                 </div>
-                <p class="small-text">Grow to become a paid ambassador</p>
-              </div>
-              <div class="circle-block text-center">
-                <div class="circle-case">
-                  <img src="./assets/img/svg/Ellipse 1 (1).svg" alt="circle">
-                </div>
-                <p class="small-text">Get access to free products and discounts</p>
-              </div>
-              <div class="circle-block text-center">
-                <div class="circle-case">
-                  <img src="./assets/img/svg/Ellipse 1 (1).svg" alt="circle">
-                </div>
-                <p class="small-text">Enters surveys and win prizes</p>
-              </div>
-              <div class="circle-block text-center">
-                <div class="circle-case">
-                  <img src="./assets/img/svg/Ellipse 1 (1).svg" alt="circle">
-                </div>
-                <p class="small-text">No money investment. Never.</p>
-              </div>      
+                <div class="form-row">            
+                  <div class="form-group px-3 col-0 col-md-6">
+                  </div>
+                  <div class="form-group px-3 col-md-6">
+                    <button id="firstResume" class="btn submit-btn tomato-text">Get Started</button>
+                  </div>
+                </div>             
+              </form>
             </div>
-            <form class="signup-form mt-3" novalidate id="signupForm">
-              <div class="form-row">
-                <div class="form-group px-3 col-md-6">
-                  <label class="sr-only" for="name">Name</label>
-                  <input type="text" class="form-control" required id="name" placeholder="Name">
-                  <div class="invalid-feedback">Please enter your name</div>
+            <div class="icons-container d-flex col-6">
+              <div class="hero-circles justify-content-center row row-cols-3 align-items-center">
+                <div class="circle-block col text-center">
+                  <div class="circle-case">
+                    <img src="./assets/img/svg/money-up.svg" alt="profit">
+                  </div>
+                  <p class="small-text">Truly passive (Requires about 5 minutes daily)</p>
                 </div>
-                <div class="form-group px-3 col-md-6">
-                  <label class="sr-only" for="email">Email address</label>
-                  <input type="email" class="form-control" required id="email" placeholder="Email address">
-                  <div class="invalid-feedback">Please enter your email address</div>
+                <div class="circle-block col text-center">
+                  <div class="circle-case">
+                    <img src="./assets/img/svg/relations 1.svg" alt="connections">
+                  </div>
+                  <p class="small-text">Grow to become a paid ambassador</p>
                 </div>
-             
+                <div class="circle-block col text-center">
+                  <div class="circle-case">
+                    <img src="./assets/img/svg/gift.svg" alt="gift">
+                  </div>
+                  <p class="small-text">Get access to free products and discounts</p>
+                </div>
+                <div class="circle-block col text-center">
+                  <div class="circle-case">
+                    <img src="./assets/img/svg/clipboard (2).svg" alt="clipboard">
+                  </div>
+                  <p class="small-text">Enters surveys and win prizes</p>
+                </div>
+                <div class="circle-block col text-center">
+                  <div class="circle-case">
+                    <img src="./assets/img/svg/wallet.svg" alt="wallet">
+                  </div>
+                  <p class="small-text">No money investment. Never.</p>
+                </div>      
               </div>
-              <div class="form-row">            
-                <div class="form-group px-3 col-md-6">
-                  <label class="sr-only" for="phone">Phone Number</label>
-                  <input type="tel" class="form-control" id="phone" placeholder="Phone Number">
-                </div>
-                <div class="form-group px-3 col-md-6">
-                  <label class="sr-only" for="location">Location</label>
-                  <input type="text" class="form-control" required id="location" placeholder="Location">
-                  <div class="invalid-feedback">Please enter your Location</div>
-                </div>
-              </div>
-              <div class="form-row">            
-                <div class="form-group px-3 col-0 col-md-6">
-                </div>
-                <div class="form-group px-3 col-md-6">
-                  <button id="firstResume" class="btn submit-btn tomato-text">Get Started</button>
-                </div>
-              </div>             
-            </form>
+            </div>
+
           </div>
           <div class="hero-content-two">
             <h3 class="">Hello Chioma,<br>How’s your day going? Please tell us a little about yourself:</h3>

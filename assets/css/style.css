@@ -209,18 +209,13 @@ letter-spacing: -0.05rem;
     position: relative;
     overflow: hidden;  
 }
-.hero-title{
-    font-weight: 700;
-    margin-bottom:1.84vh;
-}
 
-.hero-title span{
-    color: var(--secondary-color)
+.hero-form{
+    padding: 0 9rem 0 4rem;
 }
-
 
 .hero-section-one{
-width: 58.177vw;
+width: 100%;
 position: absolute;
 top: 26.5%;
 height: 100%;
@@ -232,8 +227,14 @@ height: 100%;
 
 .circle-block{
     max-width: 12.5vw ;
-    margin: 0 2.3875rem;
+    text-align: center;
+    /* margin: 0 2.3875rem; */
     
+}
+
+.circle-block > p {
+    max-width: 10rem;
+    margin: auto; 
 }
 
 .form-row{
@@ -297,7 +298,6 @@ label{
     padding: 5.2vh 8.33vw ;
     width: 100%;
     position: relative;
-    height: 100%;
     display: flex;
     flex-direction: column;   
 }
