@@ -211,7 +211,9 @@ letter-spacing: -0.05rem;
 }
 
 .hero-form{
-    padding: 0 9rem 0 4rem;
+     padding: 0 8rem 0 4rem;
+    /* width:38.125rem;
+    margin: 0 auto 0 4rem; */
 }
 
 .hero-section-one{
@@ -628,7 +630,7 @@ text-align: center;
 /* // X-Large devices (large desktops, less than 1600px) */
 @media (max-width: 1599.98px) { 
     :root{
-      font-size: 14px;    
+      font-size: 12px;    
     }
    }
 
@@ -636,21 +638,21 @@ text-align: center;
 /* // X-Large devices (large desktops, less than 1400px) */
 @media (max-width: 1399.98px) { 
     :root{
-      font-size: 12px;    
+      font-size: 11.5px;    
     }
    }
   
    /* // Large devices (desktops, less than 1200px) */
    @media (max-width: 1199.98px) {  
     :root{
-      font-size: 11px
+      font-size: 10.5px
     }
     }
     
   /* // Medium devices (tablets, less than 992px) */
   @media (max-width: 991.98px) {  
     :root{
-      font-size: 9.5px;  
+      font-size: 9px;  
     }
   }
   
