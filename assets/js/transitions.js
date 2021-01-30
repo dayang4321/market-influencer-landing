@@ -17,7 +17,10 @@ gsap.registerPlugin(ScrollToPlugin);
        boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', justifyContent: 'center', padding: '0 8rem'
      }, "scene1")
      .to(".hero-content-one", { opacity: 0, display: 'none', position: 'absolute' }, "scene1")
-     .to(".hero-content-two", { opacity: 1, display: 'block', position: 'static',  }, "scene1")
+     .to(".hero-content-two", { opacity: 1, display: 'block', position: 'static',
+       onStart: () => {
+      $('.username').text($('#name').val()|| "User")
+    }  }, "scene1")
      .to(".hero-base", { yPercent: 100, onComplete: () => { $('.hero-base').hide() } }, "scene1")
      .to(".hero-content-three", { opacity: 0, }, "scene1")
      .to(".logo path:last-of-type", { fill: '#EFC111',}, "scene1")
@@ -80,35 +83,35 @@ tl.addLabel("scene8")
 console.log(tl)
 
 
-  // tl.tweenTo("scene9")
+   tl.tweenTo("scene2")
    
-   $('#firstResume').click(() => {
-     //tl.tweenTo("scene2")
-     var tween1 = tl.tweenFromTo("scene1", "scene2");
-     //console.log(tween1)
-   });
+  //  $('#firstResume').click(() => {
+  //    //tl.tweenTo("scene2")
+  //    var tween1 = tl.tweenFromTo("scene1", "scene2");
+  //    //console.log(tween1)
+  //  });
    
-   $('#secondResume').click((event) => {
-     event.preventDefault()
-     var tween2 = tl.tweenFromTo("scene2", "scene3");
-     //console.log(tween2)
-   })
+  //  $('#secondResume').click((event) => {
+  //    event.preventDefault()
+  //    var tween2 = tl.tweenFromTo("scene2", "scene3");
+  //    //console.log(tween2)
+  //  })
    
-   $('#thirdResume').click((event) => {
-     event.preventDefault()
-     var tween3 = tl.tweenFromTo("scene3", "scene4");
-     console.log(tween3)
-   });
+  //  $('#thirdResume').click((event) => {
+  //    event.preventDefault()
+  //    var tween3 = tl.tweenFromTo("scene3", "scene4");
+  //    console.log(tween3)
+  //  });
       
 
-   $('#goBack').click((event) => {
-    tl.tweenTo( tl.previousLabel() )
-   });
+  //  $('#goBack').click((event) => {
+  //   tl.tweenTo( tl.previousLabel() )
+  //  });
   
   
 
-   $('#goForward').click((event) => {
-    tl.tweenTo( tl.nextLabel()  )
-   });
+  //  $('#goForward').click((event) => {
+  //   tl.tweenTo( tl.nextLabel()  )
+  //  });
   
   console.log(tl.currentLabel)
