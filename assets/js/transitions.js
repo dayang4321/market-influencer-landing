@@ -29,7 +29,7 @@ gsap.registerPlugin(ScrollToPlugin);
      .to(".hero-block", { marginTop: 0, height: '100%', backgroundColor: '#61BB5A', boxShadow: 'none', padding: '0 6.8125rem' }, "scene2")
      .to(".hero-content-two", { opacity: 0, display: 'none', position:'absolute'}, "scene2")
      .to(".hero-content-three", {opacity: 1, display: 'block', position: 'static',}, "scene2")
-     .to(window, {scrollTo: "max", onComplete:()=>{console.log('scrolled')}}, "scene2")
+    // .to(window, {scrollTo: "max", onComplete:()=>{console.log('scrolled')}}, "scene2")
      .to(".logo path:last-of-type", { fill:'#61BB5A',}, "scene2")
      .addLabel("scene3")
      .to(".hero-section-one", { x: '0vw', width: '100vw', }, "scene3")
@@ -83,7 +83,7 @@ tl.addLabel("scene8")
 console.log(tl)
 
 
-   tl.tweenTo("scene2")
+  tl.tweenTo("scene3")
    
   //  $('#firstResume').click(() => {
   //    //tl.tweenTo("scene2")

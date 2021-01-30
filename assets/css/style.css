@@ -297,11 +297,22 @@ input.parsley-error, select.parsley-error, textarea.parsley-error {
     padding: 0.75rem 0.75rem;
 }
 
-#infoForm .dropdown-menu.show{
+.dropdown-menu.show{
     padding:1rem 0;
     min-width: unset;
     width: 100%;
 }
+
+#infoForm .multiselect-native-select{
+    display: flex;
+    flex-direction: column;
+}
+
+#infoForm .form-group .parsley-errors-list {
+    order: 5;
+}
+
+
 .multiselect-container>li>a>label {
     margin: 0;
     height: 100%;
@@ -317,6 +328,13 @@ input.parsley-error, select.parsley-error, textarea.parsley-error {
     z-index: 1;
     display: block;
 }
+
+#detailsForm .drop-option{
+    color: var(--green);
+    font-size: var(--small-text);
+    padding: 0.75rem 3rem!important;
+}
+
 
 .drop-option input[type="checkbox"]{
     position: absolute;

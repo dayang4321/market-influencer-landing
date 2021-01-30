@@ -4,7 +4,12 @@
   
             buttonClass: 'form-control sort-button',
             buttonWidth: '100%',
-            nonSelectedText: "\00",
+          nonSelectedText: "\00",
+          checkboxName: function (option) {
+            var $select = $(option).closest('select');
+           // console.log($select[0].name)
+            return $select[0].name
+          }
         });
     });
 
@@ -30,10 +35,11 @@ $(function () {
     return $sections.index($sections.filter('.current'));
   }
 
-  // // Previous button is easy, just go back
-  // $('.form-navigation .previous').click(function() {
-  //   navigateTo(curIndex() - 1);
-  // });
+  // Previous button is easy, just go back
+  $('.form-navigation.previous').click(function() {
+    navigateTo(curIndex() - 1);
+    tl.tweenTo( tl.previousLabel() )
+  });
 
   // Next button goes forward if current block validates
   $('.form-navigation.next').click(function() {
@@ -49,7 +55,7 @@ $(function () {
   $sections.each(function(index, section) {
     $(section).find(':input').attr('data-parsley-group', 'block-' + index);
   });
-  navigateTo(0); // Start at the beginning
+  navigateTo(2); // Start at the beginning
 });
 
 
