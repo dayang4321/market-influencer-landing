@@ -260,57 +260,165 @@
           </div>
 
           <div class="hero-content-four">
+           <button class="btn border-0 back-arrow" id="goBack"><img src="./assets/img/svg/arrow-forward.svg" alt="back"/></button>
+           <button class="btn border-0 forward-arrow" id="goForward"><img src="./assets/img/svg/arrow-forward.svg" alt="forward"/></button>
             <h2>We’re finally here!</h2>
             <h3 class="mb-3">You’re one step away from earning passively</h3> 
             <p class="big-text mb-3">Mention your best brand for each of the following, preferably the ones you have used 
               (The more you answer the more income you can potentially earn)</p>
             <form class="signup-form mt-3" novalidate id="signupForm">
-              <div class="form-row row-cols-1">
+              <div class="form-row data-section-one row-cols-1">
                 <div class="form-group px-3 col">
-                  <label for="name">Choose a phrase that best describes you </label>
-                  <input type="text" class="form-control" required id="name"  placeholder="">
+                  <label for="name">African food</label>
+                  <input type="text" class="form-control" required id="name"  placeholder="Type your answer here eg: Tesla">
                   <div class="invalid-feedback">Please enter your name</div>
                 </div>
                 <div class="form-group px-3 col">
-                  <label for="email">What $entry product do you really love? (Something you would definitely recommend)</label>
-                  <input type="email" class="form-control" required id="email" placeholder="">
+                  <label for="email">Continental food</label>
+                  <input type="email" class="form-control" required id="email" placeholder="Type your answer here eg: Tesla">
                   <div class="invalid-feedback">Please enter your email address</div>
                 </div>
                 <div class="form-group px-3 col">
-                  <label for="email">What unpopular product/brand/service did you really love and 
-                    think people need to know about?</label>
-                  <input type="email" class="form-control" required id="email" placeholder="">
+                  <label for="email">Healthy food</label>
+                  <input type="email" class="form-control" required id="email" placeholder="Type your answer here eg: Tesla">
                   <div class="invalid-feedback">Please enter your email address</div>
                 </div>           
                 <div class="form-group px-3 col">
-                  <label for="phone">Kindly give us their contact (Phone number, website, email
-                     or social media handles anyone is fine)</label>
-                  <input type="tel" class="form-control" id="phone" placeholder="">
+                  <label for="phone">Sports Club</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
                 </div>
-                <div class="form-group px-3 mt-4 col">
-                  <button id="thirdResume" class="btn green-text submit-btn">Next</button>
+                <div class="form-group px-3 col">
+                  <label for="phone">Artiste</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="phone">Refrigerator</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+              </div>
+              <div class="form-row data-section-two row-cols-1">
+                <div class="form-group px-3 col">
+                  <label for="name">Drink</label>
+                  <input type="text" class="form-control" required id="name"  placeholder="Type your answer here eg: Tesla">
+                  <div class="invalid-feedback">Please enter your name</div>
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="email">Toothpaste</label>
+                  <input type="email" class="form-control" required id="email" placeholder="Type your answer here eg: Tesla">
+                  <div class="invalid-feedback">Please enter your email address</div>
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="email">Bathing soap</label>
+                  <input type="email" class="form-control" required id="email" placeholder="Type your answer here eg: Tesla">
+                  <div class="invalid-feedback">Please enter your email address</div>
+                </div>           
+                <div class="form-group px-3 col">
+                  <label for="phone">Detergent</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="phone">Water</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="phone">Cereal</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+              </div>
+              <div class="form-row data-section-three row-cols-1">
+                <div class="form-group px-3 col">
+                  <label for="name">Small chops</label>
+                  <input type="text" class="form-control" required id="name"  placeholder="Type your answer here eg: Tesla">
+                  <div class="invalid-feedback">Please enter your name</div>
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="email">Sharwama</label>
+                  <input type="email" class="form-control" required id="email" placeholder="Type your answer here eg: Tesla">
+                  <div class="invalid-feedback">Please enter your email address</div>
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="email">Beverage</label>
+                  <input type="email" class="form-control" required id="email" placeholder="Type your answer here eg: Tesla">
+                  <div class="invalid-feedback">Please enter your email address</div>
+                </div>           
+                <div class="form-group px-3 col">
+                  <label for="phone">Baby food</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="phone">Menstrual pad</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="phone">Cake</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+              </div>
+              <div class="form-row data-section-four row-cols-1">
+                <div class="form-group px-3 col">
+                  <label for="name">Airline</label>
+                  <input type="text" class="form-control" required id="name"  placeholder="Type your answer here eg: Tesla">
+                  <div class="invalid-feedback">Please enter your name</div>
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="email">Shoe</label>
+                  <input type="email" class="form-control" required id="email" placeholder="Type your answer here eg: Tesla">
+                  <div class="invalid-feedback">Please enter your email address</div>
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="email">Fashion (Casual)</label>
+                  <input type="email" class="form-control" required id="email" placeholder="Type your answer here eg: Tesla">
+                  <div class="invalid-feedback">Please enter your email address</div>
+                </div>           
+                <div class="form-group px-3 col">
+                  <label for="phone">Fashion (Sports)</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="phone">Work Fashion</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="phone">Podcast</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+              </div>
+              <div class="form-row data-section-five row-cols-1">
+                <div class="form-group px-3 col">
+                  <label for="name">Bank</label>
+                  <input type="text" class="form-control" required id="name"  placeholder="Type your answer here eg: Tesla">
+                  <div class="invalid-feedback">Please enter your name</div>
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="email">Savings</label>
+                  <input type="email" class="form-control" required id="email" placeholder="Type your answer here eg: Tesla">
+                  <div class="invalid-feedback">Please enter your email address</div>
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="email">Loan app</label>
+                  <input type="email" class="form-control" required id="email" placeholder="Type your answer here eg: Tesla">
+                  <div class="invalid-feedback">Please enter your email address</div>
+                </div>           
+                <div class="form-group px-3 col">
+                  <label for="phone">Investment app</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="phone">Ecommerce</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
+                </div>
+                <div class="form-group px-3 col">
+                  <label for="phone">Delivery company</label>
+                  <input type="tel" class="form-control" id="phone" placeholder="Type your answer here eg: Tesla">
                 </div>
               </div>
               
             </form>
           </div>
 
-          <div class="hero-content-five  text-center">
-            <h1 class="hero-title text-left">Thanks for coming on board</h1>
-
-            <div class="countdown d-flex flex-row">
-
-              <div class="clock cd100">
-                <div class="">
-                  <span class="clock-slot ml-0"> <span class="days"> 12</span> <label>Days</label> </span> : <span
-                    class="clock-slot"> <span class="hours"> 13</span> <label>Hours</label> </span> :
-                  <span class="clock-slot"> <span class="minutes"> 45</span> <label>Minutes</label> </span> : <span
-                    class="clock-slot"> <span class="seconds"> 56</span> <label>Seconds</label></span>
-                </div>
-
-              </div>
-
-            </div>
+          <div class="hero-content-five">
+            <h1 class="hero-title mb-5">Thanks for coming on board</h1>
+            <p class="big-text">Kindly check your email for our introductory mail.</p>
 
           </div>
 
