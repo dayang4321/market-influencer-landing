@@ -4,7 +4,7 @@
   //create a timeline instance
   var tl = gsap.timeline({
     paused:true,
-     defaults: { duration: 0.8, ease: "power2.out" }
+     defaults: { duration: 0.5, ease: "power2.out" }
    });
 gsap.registerPlugin(ScrollToPlugin);
 
