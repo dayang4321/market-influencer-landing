@@ -35,7 +35,7 @@ gsap.registerPlugin(ScrollToPlugin);
      .to(".logo path:last-of-type", { fill:'#61BB5A',}, "scene2")
      .addLabel("scene3")
      .to(".hero-section-one", { x: '0vw', width: '100vw', }, "scene3")
-     .to(".hero-block", { marginTop: 0, height: '100%', backgroundColor: '#1790FF', boxShadow: 'none', padding: '155px 28.1875rem',justifyContent: 'start'  }, "scene3")
+     .to(".hero-block", { marginTop: 0, height: '100%', backgroundColor: '#1790FF', boxShadow: 'none', padding: '10.3125rem 28.1875rem',justifyContent: 'start'  }, "scene3")
      .to(".hero-content-three", { opacity: 0, display: 'none', position:'absolute'}, "scene3")
      .to(".hero-content-four", { opacity: 1, display: 'block', position: 'relative', height: '100%' }, "scene3")
      .to(".data-section-one", {opacity: 1, display: 'flex', position: 'absolute',}, "scene3")
@@ -85,7 +85,7 @@ tl.addLabel("scene8")
 console.log(tl)
 
 
- // tl.tweenTo("scene3")
+  tl.tweenTo("scene3")
    
   //  $('#firstResume').click(() => {
   //    //tl.tweenTo("scene2")
