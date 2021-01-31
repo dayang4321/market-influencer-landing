@@ -663,14 +663,19 @@ text-align: center;
       font-size: 10px
     }
     }
-    
-  /* // Medium devices (tablets, less than 992px) */
-  @media (max-width: 991.98px) {  
-    :root{
-      font-size: 9px;  
-    }
-  }
-  
+
+    @media (max-width: 1139.98px) {  
+        :root{
+          font-size: 9px
+        }
+        }
+
+        @media (max-width: 1019.98px) {  
+            :root{
+              font-size: 8px
+            }
+            }
+
   
   /* // Small devices (landscape phones, less than 768px) */
   @media (max-width: 767.98px) {
@@ -683,7 +688,7 @@ text-align: center;
   /* // X-Small devices (portrait phones, less than 576px) */
   @media (max-width: 575.98px) { 
     :root{
-      font-size: 10px;  
+      font-size: 7px;  
     }
    }
   
