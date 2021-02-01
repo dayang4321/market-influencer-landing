@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollToPlugin);
    //the following two lines do the SAME thing:
    // tl.add( gsap.to("#id", {duration: 2, x: 100}) );
    tl.addLabel("scene1")
-     .to(".hero-section-one", { top: isDesktop? 0 :'35.74vw' , x: '0', minWidth: isDesktop&&'49rem', height: '100%' }, "scene1")
+     .to(".hero-section-one", { top: isDesktop? 0 :'35.74vw', width: isDesktop?'41vw':'100vw', x: '0', minWidth: isDesktop&&'49rem', height: '100%' }, "scene1")
      .to(".hero-block", {
        height: screenWidth >  767.98? '100%' : 'unset', backgroundColor: '#EFC111',
        boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', justifyContent: 'center', padding:  screenWidth >  767.98?  '0 8rem' : '5.2vh 8.33vw 10.4vh'
@@ -30,8 +30,8 @@ gsap.registerPlugin(ScrollToPlugin);
        }
      }, "scene1")
      .addLabel("scene2")
-     .from(".hero-section-one", isDesktop ? { left: '0', width: '100vw', }:{     }, "scene2")
-     .to(".hero-section-one", isDesktop ? {left: 'unset', right: '0', width: '34.323vw', }: { }, "scene2")
+    //  .from(".hero-section-one", isDesktop ? { left: '0', width: '34.323vw', }:{  width: '100vw'   }, "scene2")
+     .to(".hero-section-one", isDesktop ? {left: 'unset', right: '0', width: '34.323vw', }: {  width: '100vw'}, "scene2")
      .to(".hero-block", { marginTop: 0, backgroundColor: '#61BB5A', boxShadow: 'none'}, "scene2")
      .to(".hero-content-two", { opacity: 0, display: 'none', position:'absolute'}, "scene2")
        .to(".hero-content-three", { opacity: 1, display: 'block', position: 'static', }, "scene2")
@@ -119,7 +119,7 @@ tl.addLabel("scene8")
 console.log(tl)
 
 
- //tl.tweenTo("scene4")
+ //tl.tweenTo("scene9")
    
   //  $('#firstResume').click(() => {
   //    //tl.tweenTo("scene2")
