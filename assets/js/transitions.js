@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollToPlugin);
    //the following two lines do the SAME thing:
    // tl.add( gsap.to("#id", {duration: 2, x: 100}) );
    tl.addLabel("scene1")
-     .to(".hero-section-one", { top: screenWidth > 767.98? 0:'35.74vw' , x: '0', minWidth: isDesktop&&'49rem', width:screenWidth >  767.98? '41.042vw': '100vw', height: '100%' }, "scene1")
+     .to(".hero-section-one", { top: isDesktop? 0 :'35.74vw' , x: '0', minWidth: isDesktop&&'49rem', height: '100%' }, "scene1")
      .to(".hero-block", {
        height: screenWidth >  767.98? '100%' : 'unset', backgroundColor: '#EFC111',
        boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', justifyContent: 'center', padding:  screenWidth >  767.98?  '0 8rem' : '5.2vh 8.33vw 10.4vh'
@@ -22,21 +22,28 @@ gsap.registerPlugin(ScrollToPlugin);
        onStart: () => {
       $('.username').text($('#name').val()|| "User")
     }  }, "scene1")
-     .to(".hero-base", { yPercent: 100, onComplete: () => { $('.hero-base').hide() } }, "scene1")
      .to(".hero-content-three", { opacity: 0, }, "scene1")
      .to(".logo path:last-of-type", { fill: '#EFC111', }, "scene1")
-      .to(window, {scrollTo: {y:50}, onComplete:()=>{console.log('scrolled')}}, "scene1")
+     .to(window, {
+       scrollTo: { y: 0 }, onComplete: () => {
+         //console.log('scrolled')
+       }
+     }, "scene1")
      .addLabel("scene2")
-     .from(".hero-section-one", isDesktop ? { left: '0', width: '34.323vw', }:{     }, "scene2")
+     .from(".hero-section-one", isDesktop ? { left: '0', width: '100vw', }:{     }, "scene2")
      .to(".hero-section-one", isDesktop ? {left: 'unset', right: '0', width: '34.323vw', }: { }, "scene2")
      .to(".hero-block", { marginTop: 0, backgroundColor: '#61BB5A', boxShadow: 'none'}, "scene2")
      .to(".hero-content-two", { opacity: 0, display: 'none', position:'absolute'}, "scene2")
        .to(".hero-content-three", { opacity: 1, display: 'block', position: 'static', }, "scene2")
-       .to(window, {scrollTo: {y: 50}, onComplete:()=>{console.log('scrolled')}}, "scene2")
+     .to(window, {
+       scrollTo: { y: 0 }, onComplete: () => {
+         //console.log('scrolled2')
+       }
+     }, "scene2")
     // .to(window, {scrollTo: "max", onComplete:()=>{console.log('scrolled')}}, "scene2")
      .to(".logo path:last-of-type", { fill:'#61BB5A',}, "scene2")
      .addLabel("scene3")
-     .to(".pro-header", { paddingTop:!isDesktop&& '0'},"scene3")
+     .to(".pro-header", { paddingTop:!isDesktop && '0px'},"scene3")
      .to(".hero-section-one", { x: '0vw', width: '100vw', }, "scene3")
      .to(".hero-block", { marginTop: 0, height: '100%', backgroundColor: '#1790FF', boxShadow: 'none',justifyContent: 'start'  }, "scene3")
      .to(".hero-content-three", { opacity: 0, display: 'none', position:'absolute'}, "scene3")
@@ -45,7 +52,11 @@ gsap.registerPlugin(ScrollToPlugin);
        position: 'relative', maxWidth: '64rem', margin: 'auto', height: '100%', width: !isDesktop && "100%", paddingTop: !isDesktop&&'15rem'
      }, "scene3")
      .to(".data-section-one", {opacity: 1, display: 'flex', position: 'relative',}, "scene3")
-     .to(window, {scrollTo: "max", onComplete:()=>{console.log('scrolled')}}, "scene3")
+     .to(window, {
+       scrollTo: { y: 0 }, onComplete: () => {
+       //  console.log('scrolled3')
+       }
+     }, "scene3")
   .to(".logo path:last-of-type", { fill: '#1790FF', }, "scene3")
  
     
@@ -78,24 +89,37 @@ console.log(progress)
   .to(`.data-section-${numAsStr[i+1]}`, { opacity: 1, display: 'flex', position: 'relative', }, scene)
    //  .from(`.data-section-${numAsStr[i+1]} label`, { opacity: 0, x:'-100', display: 'block',}, scene)  
     .to(`.data-section-${numAsStr[i + 1]} label`, { opacity: 1, x: '0', }, "scene4") 
- 
+    .to(window, {
+      scrollTo: { y: 0 }, onComplete: () => {
+      //  console.log('scrolled3')
+      }
+    }, scene)
  
 }
    
 
 tl.addLabel("scene8")
-  .to(".hero-section-one", { x: '0vw', width: '54.64vw', height: '37.7%', top: '26.5%' }, "scene8")
-     .to(".hero-block", {backgroundColor: '#F86624', padding: '5.2vh 8.33vw', width: '100%', height: '100%', position: 'relative'},"scene8")
+.to(".pro-header", { paddingTop:!isDesktop&& '35vw'},"scene8")
+  .to(".hero-section-one", { left: '0vw', width: isDesktop? '41vw': '100vw',  minWidth: isDesktop&&'49rem', height:  isDesktop? '37.9%': '52vw', top: '26.5%' }, "scene8")
+     .to(".hero-block", {backgroundColor: '#F86624', padding: '5.2vh 7.25rem', width: '100%', height: '100%', position: 'relative'},"scene8")
      .to(".hero-content-four", { opacity: 0, display: 'none', position: 'absolute', }, "scene8")
-     .to(".hero-content-five", { opacity: 1, display: 'block', position: 'static', }, "scene8")
-     .to(window, {scrollTo: {y: 100}, onComplete:()=>{console.log('scrolled')}}, "scene8")
+     .to(".hero-content-five", { opacity: 1, display: 'block', position: 'static', margin:'auto' }, "scene8")
+  .to(window, {
+    scrollTo: { y: 0 },
+    onStart: () => {
+      $('.username').text($('#name').val()|| "User")
+     },
+    onComplete: () => {
+      //console.log('scrolled')
+    }
+     }, "scene8")
      .to(".logo path:last-of-type", { fill:'#F86624',}, "scene8")
      .addLabel("scene9");
 
 console.log(tl)
 
 
- tl.tweenTo("scene4")
+ //tl.tweenTo("scene4")
    
   //  $('#firstResume').click(() => {
   //    //tl.tweenTo("scene2")
