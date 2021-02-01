@@ -179,8 +179,8 @@
           </div>
           <div class="hero-content-two">
             <h3 class="">Hello <span class="username">User</span>,<br>How’s your day going? Please tell us a little about yourself:</h3>
-            <fieldset class="signup-form mt-3 form-section" id="infoForm">
-              <div class="form-row row-cols-3">
+            <fieldset class="signup-form pt-md-0 mt-3 form-section" id="infoForm">
+              <div class="form-row row-cols-2 row-cols-lg-3">
                 <div class="form-group px-3 col">
                   <label for="workStatus">Work Status</label>
                   <select id="workStatus"  data-parsley-required data-parsley-required-message="Choose one" class="form-control" name="workStatus" required>
@@ -243,9 +243,9 @@
                    </select>
                 </div>
               </div>
-              <div class="form-row row-cols-2">
+              <div class="form-row row-cols-1 row-cols-md-2">
                 <div class="form-group px-3 col">
-                  <label for="educationLevel">Highest level of <br>Education</label>
+                  <label for="educationLevel">Highest level of <br class="d-none d-md-block">Education</label>
                   <select id="educationLevel" data-parsley-required-message="Choose one" class="form-control" name="educationLevel" required>
                     <option class="drop-option d-none" selected disabled>&nbsp;</option>
                     <option class="drop-option">SSCE</option>
@@ -271,7 +271,7 @@
                 <label for="phoneType">What type of phone do you use?</label>
                 <input type="text" class="form-control" data-parsley-required-message="Please enter your phone" required id="phoneType" name="phoneType" placeholder="">
               </div>
-              <div class="form-group px-3 col">
+              <div class="form-group mt-5 mt-md-3 px-3 col">
                 <button type="button" id="secondResume" class="btn yellow-text submit-btn form-navigation next">Next</button>
               </div>
              
