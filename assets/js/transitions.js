@@ -25,8 +25,8 @@ gsap.registerPlugin(ScrollToPlugin);
      .to(".hero-content-three", { opacity: 0, }, "scene1")
      .to(".logo path:last-of-type", { fill: '#EFC111', }, "scene1")
      .to(window, {
-       scrollTo: { y: 0 }, onComplete: () => {
-         //console.log('scrolled')
+       scrollTo: 0, onComplete: () => {
+       //  console.log('scrolled')
        }
      }, "scene1")
      .addLabel("scene2")
@@ -35,11 +35,11 @@ gsap.registerPlugin(ScrollToPlugin);
      .to(".hero-block", { marginTop: 0, backgroundColor: '#61BB5A', boxShadow: 'none'}, "scene2")
      .to(".hero-content-two", { opacity: 0, display: 'none', position:'absolute'}, "scene2")
        .to(".hero-content-three", { opacity: 1, display: 'block', position: 'static', }, "scene2")
-     .to(window, {
-       scrollTo: { y: 0 }, onComplete: () => {
-         //console.log('scrolled2')
-       }
-     }, "scene2")
+       .to(window, {
+        scrollTo: 0, onComplete: () => {
+        //  console.log('scrolled2')
+        }
+      }, "scene2")
     // .to(window, {scrollTo: "max", onComplete:()=>{console.log('scrolled')}}, "scene2")
      .to(".logo path:last-of-type", { fill:'#61BB5A',}, "scene2")
      .addLabel("scene3")
@@ -53,10 +53,10 @@ gsap.registerPlugin(ScrollToPlugin);
      }, "scene3")
      .to(".data-section-one", {opacity: 1, display: 'flex', position: 'relative',}, "scene3")
      .to(window, {
-       scrollTo: { y: 0 }, onComplete: () => {
-       //  console.log('scrolled3')
-       }
-     }, "scene3")
+      scrollTo: 0, onComplete: () => {
+      //  console.log('scrolled3')
+      }
+    }, "scene3")
   .to(".logo path:last-of-type", { fill: '#1790FF', }, "scene3")
  
     
@@ -90,8 +90,8 @@ console.log(progress)
    //  .from(`.data-section-${numAsStr[i+1]} label`, { opacity: 0, x:'-100', display: 'block',}, scene)  
     .to(`.data-section-${numAsStr[i + 1]} label`, { opacity: 1, x: '0', }, "scene4") 
     .to(window, {
-      scrollTo: { y: 0 }, onComplete: () => {
-      //  console.log('scrolled3')
+      scrollTo: 0, onComplete: () => {
+      //  console.log('scrolled-for')
       }
     }, scene)
  
@@ -105,7 +105,7 @@ tl.addLabel("scene8")
      .to(".hero-content-four", { opacity: 0, display: 'none', position: 'absolute', }, "scene8")
      .to(".hero-content-five", { opacity: 1, display: 'block', position: 'static', margin:'auto' }, "scene8")
   .to(window, {
-    scrollTo: { y: 0 },
+    scrollTo: 0,
     onStart: () => {
       $('.username').text($('#name').val()|| "User")
      },
@@ -116,7 +116,7 @@ tl.addLabel("scene8")
      .to(".logo path:last-of-type", { fill:'#F86624',}, "scene8")
      .addLabel("scene9");
 
-console.log(tl)
+//console.log(tl)
 
 
  //tl.tweenTo("scene9")
