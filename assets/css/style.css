@@ -40,9 +40,7 @@
     --h4-fs: 2rem;
 
     --small-text: max(0.875rem,10px);
-    --big-text: 1.5rem;
-    --body-text: min(max(14px, 1.25vw), 36px);
-    --link-text: min(max(10px, 0.98vw), 28px);
+    --big-text: max(14px,1.5rem);
 }
 
 *{
@@ -109,7 +107,7 @@ a:hover{
 .logo{
     position: absolute;
     top: 2vh;
-    min-width: 40px;
+    min-width: 103px;
     width:  8.625rem;
     max-width: 140px;
     z-index: 101;
@@ -479,16 +477,34 @@ display: none;
 .hero-content-four .form-control::placeholder{
 font-size: 1.125rem;
 }
+.hero-content-four .progress-block{
+  padding: 0 6rem;
+}
+.hero-content-four .progress{
+    height: 9px;
+    width: 27.5rem;
+    max-width: 440px;
+    margin-left: auto;
+    background-color:#F3F3F3;
+    border-radius: 4px;
+}
+.hero-content-four .progress-bar{
+   background-color: var(--green);
+   width: 10%;
+   border-radius: 4px;
+}
 
-.forward-arrow{
+.forward-arrow,
+.back-arrow{
     position: absolute;
-    top: 50%;
+    top: 30%;
+}
+
+.forward-arrow{   
     right: -10rem;
 }
 
 .back-arrow{
-    position: absolute;
-    top: 50%;
     left: -10rem;
     transform: rotateY(180deg);
     opacity: 0;
@@ -498,6 +514,7 @@ font-size: 1.125rem;
 .forward-arrow > img,
 .back-arrow > img{
 width: 7.69rem;
+min-width: 72px;
 }
 
 .data-section-two,
@@ -735,21 +752,60 @@ text-align: center;
             max-width: 15rem;
         }
         .hero-content-two .form-group,
-        .hero-content-three .form-group{
+        .hero-content-three .form-group,
+        .hero-content-four .form-group{
             margin-top: 2rem;
         }
-   
+        .hero-content-four label{
+            font-size: 2rem;
+        }
+        .hero-content-four .form-control{
+            padding: 1.5rem 2rem;
+            color: #fff;
+            font-size: 1.25rem;
+            border-width: 5px;
+        }
+        .forward-arrow,
+        .back-arrow{
+            position: static;
+        }
+        .hero-content-four p {
+            font-weight: 400;
+        }
+        .hero-content-four .progress{
+            width: 100%;
+          }
+        .hero-content-four .progress-block{
+            padding: 0 2rem 0 0;
+          }
     }
   
   /* // X-Small devices (portrait phones, less than 576px) */
   @media (max-width: 575.98px) { 
+
+
     :root{
         font-size: 8px; 
     }
     .hero-form {
         min-width: 280px ;
-        width: unset;4
+        width: unset;
      }
+    h2, h3{
+        font-size: var(--h1-fs);
+    }
+    .hero-content-four .form-row {
+        padding: 0 2rem 0 0;
+    }
+    .hero-content-four .form-group{
+        display: block;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .hero-content-four .form-control{
+        width: 100%;
+    }
    }
   
    @media (max-width: 339.98px) { 
@@ -759,7 +815,9 @@ text-align: center;
     .hero-form {
         min-width: 100%;
      }
-
+     .hero-content-four .form-row {
+        padding: 0 6rem;
+    }
    }
   
 

@@ -36,10 +36,14 @@ gsap.registerPlugin(ScrollToPlugin);
     // .to(window, {scrollTo: "max", onComplete:()=>{console.log('scrolled')}}, "scene2")
      .to(".logo path:last-of-type", { fill:'#61BB5A',}, "scene2")
      .addLabel("scene3")
+     .to(".pro-header", { paddingTop:!isDesktop&& '0'},"scene3")
      .to(".hero-section-one", { x: '0vw', width: '100vw', }, "scene3")
      .to(".hero-block", { marginTop: 0, height: '100%', backgroundColor: '#1790FF', boxShadow: 'none',justifyContent: 'start'  }, "scene3")
      .to(".hero-content-three", { opacity: 0, display: 'none', position:'absolute'}, "scene3")
-     .to(".hero-content-four", { opacity: 1, display: 'flex',flexDirection:'column', justifyContent:'center', position: 'relative', maxWidth: '64rem', margin:'auto', height: '100%' }, "scene3")
+     .to(".hero-content-four", {
+       opacity: 1, display: 'flex', flexDirection: 'column', justifyContent: isDesktop ?'center': 'start',
+       position: 'relative', maxWidth: '64rem', margin: 'auto', height: '100%', width: !isDesktop && "100%", paddingTop: !isDesktop&&'15rem'
+     }, "scene3")
      .to(".data-section-one", {opacity: 1, display: 'flex', position: 'relative',}, "scene3")
      .to(window, {scrollTo: "max", onComplete:()=>{console.log('scrolled')}}, "scene3")
   .to(".logo path:last-of-type", { fill: '#1790FF', }, "scene3")
@@ -60,17 +64,21 @@ gsap.registerPlugin(ScrollToPlugin);
  
 var numAsStr = ['one', 'two', 'three','four', 'five']
    
-for (i = 0; i < numAsStr.length-1; i++){
+for (i = 0; i < numAsStr.length - 1; i++){
+  
+  const progress = `${32.5 + i*22.5}%`
 
   const scene = `scene${i+4}`
-console.log(i)
+console.log(progress)
   tl.addLabel(scene)
+  .to('.progress-bar',{ width: progress, duration: 0.2 },scene)
   .to(".back-arrow",{ opacity: 1, display: 'block',}, scene)
   .to(`.data-section-${numAsStr[i]} label`, { opacity: 0, x:'100%', display: 'none',}, scene)   
   .to(`.data-section-${numAsStr[i]}`, { opacity: 0, display: 'none', position:'absolute'}, scene)
   .to(`.data-section-${numAsStr[i+1]}`, { opacity: 1, display: 'flex', position: 'relative', }, scene)
    //  .from(`.data-section-${numAsStr[i+1]} label`, { opacity: 0, x:'-100', display: 'block',}, scene)  
-     .to(`.data-section-${numAsStr[i+1]} label`, { opacity: 1, x:'0',}, "scene4")  
+    .to(`.data-section-${numAsStr[i + 1]} label`, { opacity: 1, x: '0', }, "scene4") 
+ 
  
 }
    
