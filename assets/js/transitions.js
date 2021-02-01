@@ -85,7 +85,7 @@ tl.addLabel("scene8")
 console.log(tl)
 
 
- // tl.tweenTo("scene3")
+ tl.tweenTo("scene1")
    
   //  $('#firstResume').click(() => {
   //    //tl.tweenTo("scene2")

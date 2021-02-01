@@ -39,7 +39,7 @@
     --h3-fs: 2.25rem;
     --h4-fs: 2rem;
 
-    --small-text: 0.875rem;
+    --small-text: max(0.875rem,10px);
     --big-text: 1.5rem;
     --body-text: min(max(14px, 1.25vw), 36px);
     --link-text: min(max(10px, 0.98vw), 28px);
@@ -212,9 +212,9 @@ letter-spacing: -0.05rem;
 }
 
 .hero-form{
-     padding: 0 8rem 0 4rem;
-    /* width:38.125rem;
-    margin: 0 auto 0 4rem; */
+     margin: 0 0 0 4rem;
+    width:38.125rem;
+
 }
 
 .hero-section-one{
@@ -229,7 +229,7 @@ height: 100%;
 }
 
 .circle-block{
-    max-width: 12.5vw ;
+    /* max-width: 12.5vw ; */
     text-align: center;
     /* margin: 0 2.3875rem; */
     
@@ -424,7 +424,7 @@ background-image: none;
     padding:0.75rem;
     text-transform: capitalize;
     width: 100%;
-    font-size: 1.5rem;
+    font-size: max(1.5rem, 15px);
     border-radius: 5px;
 }
 
@@ -674,6 +674,9 @@ text-align: center;
             :root{
               font-size: 8px
             }
+            .pro-header{
+                background-size: cover;
+            }
             }
 
   
@@ -682,20 +685,66 @@ text-align: center;
     :root{
       font-size: 8px;  
     }
+    .pro-header{
+        /* background: url(../img/bg3.jpg), url(../img/bg1.jpg), url(../img/bg2.jpg), url(../img/bg-s.jpg) ;
+        background-position: right, top left, bottom left, 0% 43.5%;
+        background-size: 45.35% 100%,54.65% 26.86%, 54.65% 34.76%, 54.65% 38.3%; */
+    
+        background-image: url(../img/bg-mobile.jpg);
+        background-size: cover;
+       background-repeat: repeat-y; 
+        min-height: 100vh;
+        height: 293.746vw;
+        max-height: 1219px;
+        }
+
+        .hero-section-one {
+            top: 35.74vw;
+        }
+        .hero-form {
+           margin: auto;
+           min-width: 280px ;
+           width: 74%;
+        }
+        .form-control {
+            padding: 1.5rem 2rem;
+            color: #fff;
+            border-width: 3px;
+            border-radius: 5px;
+            font-size: 1.25rem;
+        }
+        .form-control::placeholder{
+            font-size: 1.25rem;
+        }
+
+        .circle-block{
+            margin: 2.3875rem 0;            
+        }
+        .circle-block > p {
+            max-width: 15rem;
+        }
    
     }
   
   /* // X-Small devices (portrait phones, less than 576px) */
   @media (max-width: 575.98px) { 
     :root{
-      font-size: 7px;  
+        font-size: 8px; 
     }
+    .hero-form {
+        min-width: 280px ;
+        width: unset;
+     }
    }
   
    @media (max-width: 339.98px) { 
     :root{
-      font-size: 8px;  
+      font-size: 7px;  
     }
+    .hero-form {
+        min-width: 100%;
+     }
+
    }
   
 
