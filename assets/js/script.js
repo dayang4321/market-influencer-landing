@@ -55,7 +55,7 @@ $(function () {
   $sections.each(function(index, section) {
     $(section).find(':input').attr('data-parsley-group', 'block-' + index);
   });
-  navigateTo(1); // Start at the beginning
+  navigateTo(2); // Start at the beginning
 });
 
 

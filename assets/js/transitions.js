@@ -27,8 +27,9 @@ gsap.registerPlugin(ScrollToPlugin);
      .to(".logo path:last-of-type", { fill: '#EFC111', }, "scene1")
       .to(window, {scrollTo: {y:50}, onComplete:()=>{console.log('scrolled')}}, "scene1")
      .addLabel("scene2")
-     .to(".hero-section-one", { x: '65.677vw', width: '34.323vw', }, "scene2")
-     .to(".hero-block", { marginTop: 0, height: '100%', backgroundColor: '#61BB5A', boxShadow: 'none', padding: '0 6.8125rem' }, "scene2")
+     .from(".hero-section-one", isDesktop ? { left: '0', width: '34.323vw', }:{     }, "scene2")
+     .to(".hero-section-one", isDesktop ? {left: 'unset', right: '0', width: '34.323vw', }: { }, "scene2")
+     .to(".hero-block", { marginTop: 0, backgroundColor: '#61BB5A', boxShadow: 'none'}, "scene2")
      .to(".hero-content-two", { opacity: 0, display: 'none', position:'absolute'}, "scene2")
        .to(".hero-content-three", { opacity: 1, display: 'block', position: 'static', }, "scene2")
        .to(window, {scrollTo: {y: 50}, onComplete:()=>{console.log('scrolled')}}, "scene2")
@@ -86,7 +87,7 @@ tl.addLabel("scene8")
 console.log(tl)
 
 
- tl.tweenTo("scene2")
+ tl.tweenTo("scene3")
    
   //  $('#firstResume').click(() => {
   //    //tl.tweenTo("scene2")
