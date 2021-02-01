@@ -37,10 +37,10 @@ gsap.registerPlugin(ScrollToPlugin);
      .to(".logo path:last-of-type", { fill:'#61BB5A',}, "scene2")
      .addLabel("scene3")
      .to(".hero-section-one", { x: '0vw', width: '100vw', }, "scene3")
-     .to(".hero-block", { marginTop: 0, height: '100%', backgroundColor: '#1790FF', boxShadow: 'none', padding: '10.3125rem 28.1875rem',justifyContent: 'start'  }, "scene3")
+     .to(".hero-block", { marginTop: 0, height: '100%', backgroundColor: '#1790FF', boxShadow: 'none',justifyContent: 'start'  }, "scene3")
      .to(".hero-content-three", { opacity: 0, display: 'none', position:'absolute'}, "scene3")
-     .to(".hero-content-four", { opacity: 1, display: 'block', position: 'relative', height: '100%' }, "scene3")
-     .to(".data-section-one", {opacity: 1, display: 'flex', position: 'absolute',}, "scene3")
+     .to(".hero-content-four", { opacity: 1, display: 'flex',flexDirection:'column', justifyContent:'center', position: 'relative', maxWidth: '64rem', margin:'auto', height: '100%' }, "scene3")
+     .to(".data-section-one", {opacity: 1, display: 'flex', position: 'relative',}, "scene3")
      .to(window, {scrollTo: "max", onComplete:()=>{console.log('scrolled')}}, "scene3")
   .to(".logo path:last-of-type", { fill: '#1790FF', }, "scene3")
  
@@ -68,7 +68,7 @@ console.log(i)
   .to(".back-arrow",{ opacity: 1, display: 'block',}, scene)
   .to(`.data-section-${numAsStr[i]} label`, { opacity: 0, x:'100%', display: 'none',}, scene)   
   .to(`.data-section-${numAsStr[i]}`, { opacity: 0, display: 'none', position:'absolute'}, scene)
-  .to(`.data-section-${numAsStr[i+1]}`, { opacity: 1, display: 'flex', position: 'absolute', }, scene)
+  .to(`.data-section-${numAsStr[i+1]}`, { opacity: 1, display: 'flex', position: 'relative', }, scene)
    //  .from(`.data-section-${numAsStr[i+1]} label`, { opacity: 0, x:'-100', display: 'block',}, scene)  
      .to(`.data-section-${numAsStr[i+1]} label`, { opacity: 1, x:'0',}, "scene4")  
  
@@ -87,7 +87,7 @@ tl.addLabel("scene8")
 console.log(tl)
 
 
- tl.tweenTo("scene3")
+ tl.tweenTo("scene4")
    
   //  $('#firstResume').click(() => {
   //    //tl.tweenTo("scene2")
