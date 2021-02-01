@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollToPlugin);
    //the following two lines do the SAME thing:
    // tl.add( gsap.to("#id", {duration: 2, x: 100}) );
    tl.addLabel("scene1")
-     .to(".hero-section-one", { top: screenWidth > 767.98? 0:'35.74vw' , x: '0', minWidth: isDesktop&&'60rem', width:screenWidth >  767.98? '41.042vw': '100vw', height: '100%' }, "scene1")
+     .to(".hero-section-one", { top: screenWidth > 767.98? 0:'35.74vw' , x: '0', minWidth: isDesktop&&'49rem', width:screenWidth >  767.98? '41.042vw': '100vw', height: '100%' }, "scene1")
      .to(".hero-block", {
        height: screenWidth >  767.98? '100%' : 'unset', backgroundColor: '#EFC111',
        boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', justifyContent: 'center', padding:  screenWidth >  767.98?  '0 8rem' : '5.2vh 8.33vw 10.4vh'
