@@ -306,12 +306,17 @@ input.parsley-error, select.parsley-error, textarea.parsley-error {
     width: 100%;
 }
 
-#infoForm .multiselect-native-select{
+#signupForm .multiselect-native-select,
+#infoForm .multiselect-native-select,
+#detailsForm .multiselect-native-select
+{
     display: flex;
     flex-direction: column;
 }
 
-#infoForm .form-group .parsley-errors-list {
+#signupForm .form-group .parsley-errors-list,
+#infoForm .form-group .parsley-errors-list ,
+#detailsForm .form-group .parsley-errors-list  {
     order: 5;
 }
 
@@ -321,12 +326,12 @@ input.parsley-error, select.parsley-error, textarea.parsley-error {
     height: 100%;
     cursor: pointer;
     font-weight: 400;
-    padding: 0;
+    padding: 0.5rem 1.25rem!important;
 }
 .drop-option{
     color: var(--yellow);
     font-size: var(--small-text);
-    padding: 0.5rem 1.25rem!important;
+    padding:0;
     position: relative;
     z-index: 1;
     display: block;
@@ -344,13 +349,18 @@ input.parsley-error, select.parsley-error, textarea.parsley-error {
 #signupForm .drop-option:hover,
 #signupForm .drop-option.active{
     color: #fff;
-    background-color: var(--tomato);
+    background-color: rgba(234, 53, 70,0.8);
+}
+
+#signupForm .drop-option.active{
+    color: #fff;
+    background-color: rgba(234, 53, 70,0.92);
 }
 
 #detailsForm .drop-option{
     color: var(--green);
     font-size: var(--small-text);
-    padding: 0.75rem 3rem!important;
+    padding: 0rem 3rem!important;
 }
 #detailsForm .drop-option:hover,
 #detailsForm .drop-option.active{
@@ -729,6 +739,9 @@ text-align: center;
     h3{
         font-size: var(--h2-fs);
     }
+    .multiselect-container>li>a>label {
+        padding: 1rem 2rem!important;
+    }
     .pro-header{
         /* background: url(../img/bg3.jpg), url(../img/bg1.jpg), url(../img/bg2.jpg), url(../img/bg-s.jpg) ;
         background-position: right, top left, bottom left, 0% 43.5%;
@@ -745,10 +758,11 @@ text-align: center;
 
         .drop-option{
             font-size: var(--h4-fs);
-            padding: 1rem 2rem!important;
+            /* padding: 1rem 2rem!important; */
             position: relative;
             z-index: 1;
             display: block;
+            padding: 0;
         }
 
         .hero-section-one {

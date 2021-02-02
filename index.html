@@ -108,70 +108,70 @@
                   <div class="form-row">
                     <div class="form-group px-3 col-md-6">
                       <label class="sr-only" for="name">Name</label>
-                      <input type="text" class="form-control" data-parsley-error-message="Please enter your name" required id="name" placeholder="Name">
+                      <input type="text" class="form-control" name="name" data-parsley-error-message="Please enter your name" required id="name" placeholder="Name*">
                     </div>
                     <div class="form-group px-3 col-md-6">
                       <label class="sr-only" for="email">Email address</label>
                       <input type="email" class="form-control"  data-parsley-required-message="Please enter your email address" 
-                      data-parsley-type-message="Please enter a valid email address" required id="email" placeholder="Email address">      
+                      data-parsley-type-message="Please enter a valid email address" required name="email" id="email" placeholder="Email address*">      
                     </div>
                  
                   </div>
                   <div class="form-row">            
                     <div class="form-group px-3 col-md-6">
                       <label class="sr-only" for="phone">Phone Number</label>
-                      <input type="tel" class="form-control" data-parsley-type="digits" 	
-                      minlength="8" data-parsley-type-message="Please enter a valid phone number"  id="phone" placeholder="Phone Number">
+                      <input type="tel" class="form-control" data-parsley-type="digits" required 	data-parsley-required data-parsley-required-message="Please enter your phone number"
+                      minlength="8" data-parsley-type-message="Please enter a valid phone number" name="phone" id="phone" placeholder="Phone Number*">
                     </div>
                     <div class="form-group px-3 col-md-6">
-                      <label class="sr-only" for="">State</label>
+                      <label class="sr-only" for="state">State</label>
                       <select data-parsley-required data-parsley-required-message="Please select a state"
-                       placeholder="State" class="form-control" name="state" id="state" required>
-                        <option class="drop-option d-none" selected disabled>State</option>
-                        <option class="drop-option" value="Abia">Abia</option>
-                        <option class="drop-option" value="Adamawa">Adamawa</option>
-                        <option class="drop-option" value="Akwa Ibom">Akwa Ibom</option>
-                        <option class="drop-option" value="Anambra">Anambra</option>
-                        <option class="drop-option" value="Bauchi">Bauchi</option>
-                        <option class="drop-option" value="Bayelsa">Bayelsa</option>
-                        <option class="drop-option" value="Benue">Benue</option>
-                        <option class="drop-option" value="Borno">Borno</option>
-                        <option class="drop-option" value="Cross Rive">Cross River</option>
-                        <option class="drop-option" value="Delta">Delta</option>
-                        <option class="drop-option" value="Ebonyi">Ebonyi</option>
-                        <option class="drop-option" value="Edo">Edo</option>
-                        <option class="drop-option" value="Ekiti">Ekiti</option>
-                        <option class="drop-option" value="Enugu">Enugu</option>
-                        <option class="drop-option" value="FCT">Federal Capital Territory</option>
-                        <option class="drop-option" value="Gombe">Gombe</option>
-                        <option class="drop-option" value="Imo">Imo</option>
-                        <option class="drop-option" value="Jigawa">Jigawa</option>
-                        <option class="drop-option" value="Kaduna">Kaduna</option>
-                        <option class="drop-option" value="Kano">Kano</option>
-                        <option class="drop-option" value="Katsina">Katsina</option>
-                        <option class="drop-option" value="Kebbi">Kebbi</option>
-                        <option class="drop-option" value="Kogi">Kogi</option>
-                        <option class="drop-option" value="Kwara">Kwara</option>
-                        <option class="drop-option" value="Lagos">Lagos</option>
-                        <option class="drop-option" value="Nasarawa">Nasarawa</option>
-                        <option class="drop-option" value="Niger">Niger</option>
-                        <option class="drop-option" value="Ogun">Ogun</option>
-                        <option class="drop-option" value="Ondo">Ondo</option>
-                        <option class="drop-option" value="Osun">Osun</option>
-                        <option class="drop-option" value="Oyo">Oyo</option>
-                        <option class="drop-option" value="Plateau">Plateau</option>
-                        <option class="drop-option" value="Rivers">Rivers</option>
-                        <option class="drop-option" value="Sokoto">Sokoto</option>
-                        <option class="drop-option" value="Taraba">Taraba</option>
-                        <option class="drop-option" value="Yobe">Yobe</option>
-                        <option class="drop-option" value="Zamfara">Zamfara</option>
-                       </select>
-                    </div>
+                       placeholder="State*" class="form-control" name="state" id="state" required>
+                        <option class="drop-option d-none" value selected disabled>State*</option>
+                        <option class="drop-option" >Abia</option>
+                        <option class="drop-option" >Adamawa</option>
+                        <option class="drop-option" >Akwa Ibom</option>
+                        <option class="drop-option" >Anambra</option>
+                        <option class="drop-option" >Bauchi</option>
+                        <option class="drop-option" >Bayelsa</option>
+                        <option class="drop-option" >Benue</option>
+                        <option class="drop-option" >Borno</option>
+                        <option class="drop-option" >Cross River</option>
+                        <option class="drop-option" >Delta</option>
+                        <option class="drop-option" >Ebonyi</option>
+                        <option class="drop-option" >Edo</option>
+                        <option class="drop-option" >Ekiti</option>
+                        <option class="drop-option" >Enugu</option>
+                        <option class="drop-option" >Federal Capital Territory</option>
+                        <option class="drop-option" >Gombe</option>
+                        <option class="drop-option" >Imo</option>
+                        <option class="drop-option" >Jigawa</option>
+                        <option class="drop-option" >Kaduna</option>
+                        <option class="drop-option" >Kano</option>
+                        <option class="drop-option" >Katsina</option>
+                        <option class="drop-option" >Kebbi</option>
+                        <option class="drop-option" >Kogi</option>
+                        <option class="drop-option" >Kwara</option>
+                        <option class="drop-option" >Lagos</option>
+                        <option class="drop-option" >Nasarawa</option>
+                        <option class="drop-option" >Niger</option>
+                        <option class="drop-option" >Ogun</option>
+                        <option class="drop-option" >Ondo</option>
+                        <option class="drop-option" >Osun</option>
+                        <option class="drop-option" >Oyo</option>
+                        <option class="drop-option" >Plateau</option>
+                        <option class="drop-option" >Rivers</option>
+                        <option class="drop-option" >Sokoto</option>
+                        <option class="drop-option" >Taraba</option>
+                        <option class="drop-option" >Yobe</option>
+                        <option class="drop-option" >Zamfara</option>
+                       </select>          
+                         </div>
                   </div>
                   <div class="form-row">            
                     <div class="form-group px-3 col-md-6">
                       <label class="sr-only" for="city">City</label>     
-                       <input type="text" class="form-control" name="city"  data-parsley-required-message="Please select a city"  required id="city" placeholder="City">
+                       <input type="text" autocapitalize="words" class="form-control" name="city"  data-parsley-required-message="Please enter your city" required id="city" placeholder="City*">
                     </div>
                     <div class="form-group px-3 col-md-6">
                       <button type="button" id="firstResume" class="btn submit-btn tomato-text form-navigation next">Get Started</button>
@@ -223,7 +223,7 @@
               <div class="form-row row-cols-2 row-cols-lg-3">
                 <div class="form-group px-3 col">
                   <label for="workStatus">Work Status</label>
-                  <select id="workStatus"  data-parsley-required data-parsley-required-message="Choose one" class="form-control" name="workStatus" required>
+                  <select id="workStatus"  data-parsley-required data-parsley-required-message="Choose one" class="form-control" name="work" required>
                     <option class="drop-option d-none" selected disabled>&nbsp;</option>
                     <option class="drop-option">Employed</option>
                     <option class="drop-option">Unemployed</option>
@@ -245,7 +245,7 @@
                 </div>
                 <div class="form-group px-3 col">
                   <label for="incomeLevel">Income level</label>
-                  <select id="incomeLevel" data-parsley-required-message="Choose one" class="form-control" name="incomeLevel" required>
+                  <select id="incomeLevel" data-parsley-required-message="Choose one" class="form-control" name="income_level" required>
                     <option class="drop-option d-none" selected disabled>&nbsp;</option>
                     <option class="drop-option">&lt;&#x20A6;30,000</option>
                     <option class="drop-option">&#x20A6;30,000 - &#x20A6;100,000</option>
@@ -275,7 +275,7 @@
                 </div>
                 <div class="form-group px-3 col">
                   <label for="maritalStatus">Marital Status</label>
-                  <select id="maritalStatus" data-parsley-required-message="Choose one" class="form-control" name="maritalStatus" required>
+                  <select id="maritalStatus" data-parsley-required-message="Choose one" class="form-control" name="marital_status" required>
                     <option class="drop-option d-none" selected disabled>&nbsp;</option>
                     <option class="drop-option">Single</option>
                     <option class="drop-option">Married</option>
@@ -286,7 +286,7 @@
               <div class="form-row row-cols-1 row-cols-md-2">
                 <div class="form-group px-3 col">
                   <label for="educationLevel">Highest level of <br class="d-none d-md-block">Education</label>
-                  <select id="educationLevel" data-parsley-required-message="Choose one" class="form-control" name="educationLevel" required>
+                  <select id="educationLevel" data-parsley-required-message="Choose one" class="form-control" name="education_level" required>
                     <option class="drop-option d-none" selected disabled>&nbsp;</option>
                     <option class="drop-option">SSCE</option>
                     <option class="drop-option">BSc./ B.A.</option>
@@ -296,7 +296,7 @@
                 </div>
                 <div class="form-group px-3 col">
                   <label for="socialPlatforms">What Social media platforms do you use?</label>
-                  <select id="socialPlatforms" data-parsley-required-message="Choose one or more" class="form-control" name="socialPlatforms[]" multiple="multiple" required>
+                  <select id="socialPlatforms" data-parsley-required-message="Choose one or more" class="form-control" name="media_platform" multiple="multiple" required>
                     <option class="drop-option">WhatsApp</option>
                     <option class="drop-option">Instagram</option>
                     <option class="drop-option">Twitter</option> 
@@ -309,7 +309,7 @@
               <div class="form-row row-cols-1">
               <div class="form-group px-3 col">
                 <label for="phoneType">What type of phone do you use?</label>
-                <input type="text" class="form-control" data-parsley-required-message="Please enter your phone" required id="phoneType" name="phoneType" placeholder="">
+                <input type="text" class="form-control" data-parsley-required-message="Please enter your phone" required id="phoneType" name="phone_type" placeholder="">
               </div>
               <div class="form-group mt-5 mt-md-3 px-3 col">
                 <button type="button" id="secondResume" class="btn yellow-text submit-btn form-navigation next">Next</button>
@@ -327,7 +327,7 @@
                 <div class="form-group px-3 col">
                   <label for="descriptivePhrase">Choose a phrase that best describes you </label>
                   <select id="educationLevel" data-parsley-required-message="Kindly choose a phrase" id="descriptivePhrase"
-                   name="descriptivePhrase" class="form-control" required>
+                   name="description" class="form-control" required>
                     <option class="drop-option d-none" selected disabled>&nbsp;</option>
                     <option class="drop-option">FitfFam</option>
                     <option class="drop-option">Foodie</option>
@@ -347,17 +347,17 @@
                 </div>
                 <div class="form-group px-3 col">
                   <label for="bestProduct">What entry product do you really love? (Something you would definitely recommend)</label>
-                  <input type="text" class="form-control" required id="bestProduct" name="bestProduct" placeholder="">
+                  <input type="text" class="form-control" required id="bestProduct" name="entry_products" placeholder="">
                 </div>
                 <div class="form-group px-3 col">
                   <label for="underratedProduct">What unpopular product/brand/service did you really love and 
                     think people need to know about?</label>
-                  <input type="text" class="form-control" required id="underratedProduct" name="underratedProduct" placeholder="">
+                  <input type="text" class="form-control" required id="underratedProduct" name="unpopular_products" placeholder="">
                 </div>           
                 <div class="form-group px-3 col">
                   <label for="productContact">Kindly give us their contact (Phone number, website, email
                      or social media handles anyone is fine)</label>
-                  <input type="text" class="form-control" id="productContact" name="productContact" placeholder="">
+                  <input type="text" class="form-control" id="productContact" name="product_contact" placeholder="">
                 </div>
                 <div class="form-group px-3 mt-4 col">
                   <button type="button" id="thirdResume" class="btn green-text submit-btn form-navigation next">Next</button>
@@ -374,7 +374,7 @@
             <p class="big-text mb-3">Mention your best brand for each of the following, preferably the ones you have used 
               (The more you answer the more income you can potentially earn)</p>
             <fieldset class="signup-form mt-3" novalidate id="dataForm">
-              <div class="form-row data-section-one form-section row-cols-1">
+              <!-- <div class="form-row data-section-one form-section row-cols-1">
                 <div class="form-group px-3 col">
                   <label for="africanFood">African food</label>
                   <input type="text" class="form-control" id="africanFood" name="africanFood"  placeholder="Type your answer here eg: Tesla">
@@ -508,9 +508,11 @@
                 <div class="form-group px-3 col">
                   <label for="deliveryCompany">Delivery company</label>
                   <input type="text" class="form-control" id="deliveryCompany" name="deliveryCompany" placeholder="Type your answer here eg: Tesla">
-                </div>    
+                </div>
+                
+                
 
-              </div>
+              </div> -->
               
               <div class="d-flex mt-4 justify-content-between">
                 <button type="button" class="btn border-0 back-arrow form-navigation previous" id="goBack"><img src="./assets/img/svg/arrow-forward.svg" alt="back"/></button>
@@ -557,8 +559,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
        <!-- Bootstrap Multiselect JavaScript -->
        <script type="text/javascript" src=" https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.15/js/bootstrap-multiselect.js"></script>
-  <script src="assets/js/transitions.js"></script>
+
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/transitions.js"></script>
 
 </body>
 

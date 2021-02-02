@@ -20,7 +20,7 @@ gsap.registerPlugin(ScrollToPlugin);
      .to(".hero-content-one", { opacity: 0, display: 'none', position: 'absolute' }, "scene1")
      .to(".hero-content-two", { opacity: 1, display: 'block', position: 'static',
        onStart: () => {
-      $('.username').text($('#name').val()|| "User")
+      $('.username').text(username|| "User")
     }  }, "scene1")
      .to(".hero-content-three", { opacity: 0, }, "scene1")
      .to(".logo path:last-of-type", { fill: '#EFC111', }, "scene1")
@@ -80,7 +80,6 @@ for (i = 0; i < numAsStr.length - 1; i++){
   const progress = `${32.5 + i*22.5}%`
 
   const scene = `scene${i+4}`
-console.log(progress)
   tl.addLabel(scene)
   .to('.progress-bar',{ width: progress, duration: 0.2 },scene)
   .to(".back-arrow",{ opacity: 1, display: 'block',}, scene)
@@ -107,7 +106,7 @@ tl.addLabel("scene8")
   .to(window, {
     scrollTo: 0,
     onStart: () => {
-      $('.username').text($('#name').val()|| "User")
+      $('.username').text(username|| "User")
      },
     onComplete: () => {
       //console.log('scrolled')
@@ -150,4 +149,4 @@ tl.addLabel("scene8")
   //   tl.tweenTo( tl.nextLabel()  )
   //  });
   
-  console.log(tl.currentLabel)
+  //console.log(tl.currentLabel)
