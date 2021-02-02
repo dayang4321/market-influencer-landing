@@ -331,13 +331,32 @@ input.parsley-error, select.parsley-error, textarea.parsley-error {
     z-index: 1;
     display: block;
 }
+.drop-option:hover,
+.drop-option.active{
+    color: #fff;
+    background-color: var(--yellow);
+}
+
+
+#signupForm .drop-option{
+    color: var(--tomato);
+}
+#signupForm .drop-option:hover,
+#signupForm .drop-option.active{
+    color: #fff;
+    background-color: var(--tomato);
+}
 
 #detailsForm .drop-option{
     color: var(--green);
     font-size: var(--small-text);
     padding: 0.75rem 3rem!important;
 }
-
+#detailsForm .drop-option:hover,
+#detailsForm .drop-option.active{
+    color: #fff;
+    background-color: var(--green);
+}
 
 .drop-option input[type="checkbox"]{
     position: absolute;
@@ -722,6 +741,14 @@ text-align: center;
         height: 293.746vw;
         max-height: 1219px;
         padding-top: 35vw;
+        }
+
+        .drop-option{
+            font-size: var(--h4-fs);
+            padding: 1rem 2rem!important;
+            position: relative;
+            z-index: 1;
+            display: block;
         }
 
         .hero-section-one {

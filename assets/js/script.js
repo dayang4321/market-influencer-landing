@@ -1,11 +1,11 @@
 
        $(document).ready(function() {
         $('select.form-control').multiselect({
-  
+            maxHeight: 200,
             buttonClass: 'form-control sort-button',
             buttonWidth: '100%',
-          nonSelectedText: "\00",
-          checkboxName: function (option) {
+            nonSelectedText: "\00",
+              checkboxName: function (option) {
             var $select = $(option).closest('select');
            // console.log($select[0].name)
             return $select[0].name
@@ -55,7 +55,7 @@ $(function () {
   $sections.each(function(index, section) {
     $(section).find(':input').attr('data-parsley-group', 'block-' + index);
   });
-  navigateTo(0); // Start at the beginning
+  navigateTo(2); // Start at the beginning
 });
 
 

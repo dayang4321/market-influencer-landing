@@ -113,8 +113,7 @@
                     <div class="form-group px-3 col-md-6">
                       <label class="sr-only" for="email">Email address</label>
                       <input type="email" class="form-control"  data-parsley-required-message="Please enter your email address" 
-                      data-parsley-type-message="Please enter a valid email address" required id="email" placeholder="Email address">
-      
+                      data-parsley-type-message="Please enter a valid email address" required id="email" placeholder="Email address">      
                     </div>
                  
                   </div>
@@ -125,13 +124,54 @@
                       minlength="8" data-parsley-type-message="Please enter a valid phone number"  id="phone" placeholder="Phone Number">
                     </div>
                     <div class="form-group px-3 col-md-6">
-                      <label class="sr-only" for="location">Location</label>
-                      <input type="text" class="form-control"   data-parsley-required-message="Please enter your Location"  required id="location" placeholder="Location">
+                      <label class="sr-only" for="">State</label>
+                      <select data-parsley-required data-parsley-required-message="Please select a state"
+                       placeholder="State" class="form-control" name="state" id="state" required>
+                        <option class="drop-option d-none" selected disabled>State</option>
+                        <option class="drop-option" value="Abia">Abia</option>
+                        <option class="drop-option" value="Adamawa">Adamawa</option>
+                        <option class="drop-option" value="Akwa Ibom">Akwa Ibom</option>
+                        <option class="drop-option" value="Anambra">Anambra</option>
+                        <option class="drop-option" value="Bauchi">Bauchi</option>
+                        <option class="drop-option" value="Bayelsa">Bayelsa</option>
+                        <option class="drop-option" value="Benue">Benue</option>
+                        <option class="drop-option" value="Borno">Borno</option>
+                        <option class="drop-option" value="Cross Rive">Cross River</option>
+                        <option class="drop-option" value="Delta">Delta</option>
+                        <option class="drop-option" value="Ebonyi">Ebonyi</option>
+                        <option class="drop-option" value="Edo">Edo</option>
+                        <option class="drop-option" value="Ekiti">Ekiti</option>
+                        <option class="drop-option" value="Enugu">Enugu</option>
+                        <option class="drop-option" value="FCT">Federal Capital Territory</option>
+                        <option class="drop-option" value="Gombe">Gombe</option>
+                        <option class="drop-option" value="Imo">Imo</option>
+                        <option class="drop-option" value="Jigawa">Jigawa</option>
+                        <option class="drop-option" value="Kaduna">Kaduna</option>
+                        <option class="drop-option" value="Kano">Kano</option>
+                        <option class="drop-option" value="Katsina">Katsina</option>
+                        <option class="drop-option" value="Kebbi">Kebbi</option>
+                        <option class="drop-option" value="Kogi">Kogi</option>
+                        <option class="drop-option" value="Kwara">Kwara</option>
+                        <option class="drop-option" value="Lagos">Lagos</option>
+                        <option class="drop-option" value="Nasarawa">Nasarawa</option>
+                        <option class="drop-option" value="Niger">Niger</option>
+                        <option class="drop-option" value="Ogun">Ogun</option>
+                        <option class="drop-option" value="Ondo">Ondo</option>
+                        <option class="drop-option" value="Osun">Osun</option>
+                        <option class="drop-option" value="Oyo">Oyo</option>
+                        <option class="drop-option" value="Plateau">Plateau</option>
+                        <option class="drop-option" value="Rivers">Rivers</option>
+                        <option class="drop-option" value="Sokoto">Sokoto</option>
+                        <option class="drop-option" value="Taraba">Taraba</option>
+                        <option class="drop-option" value="Yobe">Yobe</option>
+                        <option class="drop-option" value="Zamfara">Zamfara</option>
+                       </select>
                     </div>
                   </div>
                   <div class="form-row">            
-                    <div class="form-group px-3 d-none d-md-block col-0 col-md-6">
-                      
+                    <div class="form-group px-3 col-md-6">
+                      <label class="sr-only" for="city">City</label>     
+                       <input type="text" class="form-control" name="city"  data-parsley-required-message="Please select a city"  required id="city" placeholder="City">
                     </div>
                     <div class="form-group px-3 col-md-6">
                       <button type="button" id="firstResume" class="btn submit-btn tomato-text form-navigation next">Get Started</button>
@@ -473,8 +513,8 @@
               </div>
               
               <div class="d-flex mt-4 justify-content-between">
-                <button class="btn border-0 back-arrow form-navigation previous" id="goBack"><img src="./assets/img/svg/arrow-forward.svg" alt="back"/></button>
-                <button class="btn border-0 ml-auto forward-arrow form-navigation next" id="goForward"><img src="./assets/img/svg/arrow-forward.svg" alt="forward"/></button>
+                <button type="button" class="btn border-0 back-arrow form-navigation previous" id="goBack"><img src="./assets/img/svg/arrow-forward.svg" alt="back"/></button>
+                <button type="button" class="btn border-0 ml-auto forward-arrow form-navigation next" id="goForward"><img src="./assets/img/svg/arrow-forward.svg" alt="forward"/></button>
               </div>
                 <div class="col progress-block">
                   <div class="progress mr-2 mt-5 mt-md-2" >

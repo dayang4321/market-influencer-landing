@@ -119,7 +119,7 @@ tl.addLabel("scene8")
 //console.log(tl)
 
 
- //tl.tweenTo("scene9")
+tl.tweenTo("scene3")
    
   //  $('#firstResume').click(() => {
   //    //tl.tweenTo("scene2")
