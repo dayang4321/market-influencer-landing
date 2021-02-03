@@ -82,7 +82,7 @@ var numAsStr = ['one', 'two', 'three','four', 'five']
 //console.log(tl)
 
 
-//tl.tweenTo("scene4")
+tl.tweenTo("scene2")
    
   //  $('#firstResume').click(() => {
   //    //tl.tweenTo("scene2")
