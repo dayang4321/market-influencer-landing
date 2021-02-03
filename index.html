@@ -326,7 +326,7 @@
               <div class="form-row row-cols-1">
                 <div class="form-group px-3 col">
                   <label for="descriptivePhrase">Choose a phrase that best describes you </label>
-                  <select id="educationLevel" data-parsley-required-message="Kindly choose a phrase" id="descriptivePhrase"
+                  <select data-parsley-required-message="Kindly choose a phrase" id="descriptivePhrase"
                    name="description" class="form-control" required>
                     <option class="drop-option d-none" selected disabled>&nbsp;</option>
                     <option class="drop-option">FitfFam</option>
@@ -346,7 +346,7 @@
                   
                 </div>
                 <div class="form-group px-3 col">
-                  <label for="bestProduct">What entry product do you really love? (Something you would definitely recommend)</label>
+                  <label for="bestProduct">What <span id="userNiche"></span> product do you really love? (Something you would definitely recommend)</label>
                   <input type="text" class="form-control" required id="bestProduct" name="entry_products" placeholder="">
                 </div>
                 <div class="form-group px-3 col">
@@ -374,147 +374,7 @@
             <p class="big-text mb-3">Mention your best brand for each of the following, preferably the ones you have used 
               (The more you answer the more income you can potentially earn)</p>
             <fieldset class="signup-form mt-3" novalidate id="dataForm">
-              <!-- <div class="form-row data-section-one form-section row-cols-1">
-                <div class="form-group px-3 col">
-                  <label for="africanFood">African food</label>
-                  <input type="text" class="form-control" id="africanFood" name="africanFood"  placeholder="Type your answer here eg: Tesla">
-                  <div class="invalid-feedback">Please enter your name</div>
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="continentalFood">Continental food</label>
-                  <input type="text" class="form-control" id="continentalFood" name="continentalFood" placeholder="Type your answer here eg: Tesla">
-                  <div class="invalid-feedback">Please enter your email address</div>
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="healthyFood">Healthy food</label>
-                  <input type="text" class="form-control" id="healthyFood" name="healthyFood" placeholder="Type your answer here eg: Tesla">
-                  <div class="invalid-feedback">Please enter your email address</div>
-                </div>           
-                <div class="form-group px-3 col">
-                  <label for="sportsClub">Sports Club</label>
-                  <input type="text" class="form-control" id="sportsClub" name="sportsClub" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="artiste">Artiste</label>
-                  <input type="text" class="form-control" id="artiste" name="artiste" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="refrigerator">Refrigerator</label>
-                  <input type="text" class="form-control" id="refrigerator" name="refrigerator" placeholder="Type your answer here eg: Tesla">
-                </div>
-                
-              </div>
-              <div class="form-row data-section-two form-section row-cols-1">
-                <div class="form-group px-3 col">
-                  <label for="drink">Drink</label>
-                  <input type="text" class="form-control" name="drink" id="drink"  placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="toothpaste">Toothpaste</label>
-                  <input type="text" class="form-control" id="toothpaste" name="toothpaste" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="bathingSoap">Bathing soap</label>
-                  <input type="text" class="form-control" id="bathingSoap" name="bathingSoap" placeholder="Type your answer here eg: Tesla">
-                </div>           
-                <div class="form-group px-3 col">
-                  <label for="detergent">Detergent</label>
-                  <input type="text" class="form-control" id="detergent" name="detergent" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="water">Water</label>
-                  <input type="text" class="form-control" id="water" name="water" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="cereal">Cereal</label>
-                  <input type="text" class="form-control" id="cereal" name="cereal" placeholder="Type your answer here eg: Tesla">
-                </div>
-              </div>
-              <div class="form-row data-section-three form-section row-cols-1">
-                <div class="form-group px-3 col">
-                  <label for="smallChops">Small chops</label>
-                  <input type="text" class="form-control" id="smallChops" name="smallChops"  placeholder="Type your answer here eg: Tesla">                </div>
-                <div class="form-group px-3 col">
-                  <label for="sharwama">Sharwama</label>
-                  <input type="text" class="form-control" id="sharwama" name="sharwama" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="beverage">Beverage</label>
-                  <input type="text" class="form-control" id="beverage" name="beverage" placeholder="Type your answer here eg: Tesla">
-                </div>           
-                <div class="form-group px-3 col">
-                  <label for="babyFood">Baby food</label>
-                  <input type="text" class="form-control" id="babyFood" name="babyFood" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="menstrualPad">Menstrual pad</label>
-                  <input type="text" class="form-control" id="menstrualPad" name="menstrualPad" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="cake">Cake</label>
-                  <input type="text" class="form-control" id="cake" name="cake" placeholder="Type your answer here eg: Tesla">
-                </div>
-              </div>
-              <div class="form-row data-section-four form-section row-cols-1">
-                <div class="form-group px-3 col">
-                  <label for="airline">Airline</label>
-                  <input type="text" class="form-control" id="airline" name="airline"  placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="shoe">Shoe</label>
-                  <input type="text" class="form-control" id="shoe" name="shoe" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="casualFashion">Fashion (Casual)</label>
-                  <input type="text" class="form-control" id="casualFashion" name="casualFashion" placeholder="Type your answer here eg: Tesla">
-                </div>           
-                <div class="form-group px-3 col">
-                  <label for="sportsFashion">Fashion (Sports)</label>
-                  <input type="text" class="form-control" id="sportsFashion" name="sportsFashion" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="workFashion">Work Fashion</label>
-                  <input type="text" class="form-control" id="workFashion" name="workFashion" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="podcast">Podcast</label>
-                  <input type="text" class="form-control" id="podcast" name="podcast" placeholder="Type your answer here eg: Tesla">
-                </div>
-              </div>
-              <div class="form-row data-section-five form-section row-cols-1">
-                <div class="form-group px-3 col">
-                  <label for="bank">Bank</label>
-                  <input type="text" class="form-control" id="bank" name="bank"  placeholder="Type your answer here eg: Tesla">
-                  <div class="invalid-feedback">Please enter your name</div>
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="savings">Savings</label>
-                  <input type="text" class="form-control" id="savings" name="savings" placeholder="Type your answer here eg: Tesla">
-                  <div class="invalid-feedback">Please enter your email address</div>
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="loanApp">Loan app</label>
-                  <input type="text" class="form-control" id="loanApp" name="loanApp" placeholder="Type your answer here eg: Tesla">
-                  <div class="invalid-feedback">Please enter your email address</div>
-                </div>           
-                <div class="form-group px-3 col">
-                  <label for="investmentApp">Investment app</label>
-                  <input type="text" class="form-control" id="investmentApp" name="investmentApp" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="ecommerce">Ecommerce</label>
-                  <input type="text" class="form-control" id="ecommerce" name="ecommerce" placeholder="Type your answer here eg: Tesla">
-                </div>
-                <div class="form-group px-3 col">
-                  <label for="deliveryCompany">Delivery company</label>
-                  <input type="text" class="form-control" id="deliveryCompany" name="deliveryCompany" placeholder="Type your answer here eg: Tesla">
-                </div>
-                
-                
-
-              </div> -->
-              
-              <div class="d-flex mt-4 justify-content-between">
+             <div class="d-flex mt-4 justify-content-between">
                 <button type="button" class="btn border-0 back-arrow form-navigation previous" id="goBack"><img src="./assets/img/svg/arrow-forward.svg" alt="back"/></button>
                 <button type="button" class="btn border-0 ml-auto forward-arrow form-navigation next" id="goForward"><img src="./assets/img/svg/arrow-forward.svg" alt="forward"/></button>
               </div>

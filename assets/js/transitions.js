@@ -51,7 +51,7 @@ gsap.registerPlugin(ScrollToPlugin);
        opacity: 1, display: 'flex', flexDirection: 'column', justifyContent: isDesktop ?'center': 'start',
        position: 'relative', maxWidth: '64rem', margin: 'auto', height: '100%', width: !isDesktop && "100%", paddingTop: !isDesktop&&'15rem'
      }, "scene3")
-     .to(".data-section-one", {opacity: 1, display: 'flex', position: 'relative',}, "scene3")
+    
      .to(window, {
       scrollTo: 0, onComplete: () => {
       //  console.log('scrolled3')
@@ -75,50 +75,14 @@ gsap.registerPlugin(ScrollToPlugin);
  
 var numAsStr = ['one', 'two', 'three','four', 'five']
    
-for (i = 0; i < numAsStr.length - 1; i++){
-  
-  const progress = `${32.5 + i*22.5}%`
-
-  const scene = `scene${i+4}`
-  tl.addLabel(scene)
-  .to('.progress-bar',{ width: progress, duration: 0.2 },scene)
-  .to(".back-arrow",{ opacity: 1, display: 'block',}, scene)
-  .to(`.data-section-${numAsStr[i]} label`, { opacity: 0, x:'100%', display: 'none',}, scene)   
-  .to(`.data-section-${numAsStr[i]}`, { opacity: 0, display: 'none', position:'absolute'}, scene)
-  .to(`.data-section-${numAsStr[i+1]}`, { opacity: 1, display: 'flex', position: 'relative', }, scene)
-   //  .from(`.data-section-${numAsStr[i+1]} label`, { opacity: 0, x:'-100', display: 'block',}, scene)  
-    .to(`.data-section-${numAsStr[i + 1]} label`, { opacity: 1, x: '0', }, "scene4") 
-    .to(window, {
-      scrollTo: 0, onComplete: () => {
-      //  console.log('scrolled-for')
-      }
-    }, scene)
- 
-}
-   
-
-tl.addLabel("scene8")
-.to(".pro-header", { paddingTop:!isDesktop&& '35vw'},"scene8")
-  .to(".hero-section-one", { left: '0vw', width: isDesktop? '41vw': '100vw',  minWidth: isDesktop&&'49rem', height:  isDesktop? '37.9%': '52vw', top: '26.5%' }, "scene8")
-     .to(".hero-block", {backgroundColor: '#F86624', padding: '5.2vh 7.25rem', width: '100%', height: '100%', position: 'relative'},"scene8")
-     .to(".hero-content-four", { opacity: 0, display: 'none', position: 'absolute', }, "scene8")
-     .to(".hero-content-five", { opacity: 1, display: 'block', position: 'static', margin:'auto' }, "scene8")
-  .to(window, {
-    scrollTo: 0,
-    onStart: () => {
-      $('.username').text(username|| "User")
-     },
-    onComplete: () => {
-      //console.log('scrolled')
-    }
-     }, "scene8")
-     .to(".logo path:last-of-type", { fill:'#F86624',}, "scene8")
-     .addLabel("scene9");
-
-//console.log(tl)
 
 
-//tl.tweenTo("scene")
+
+
+console.log(tl)
+
+
+tl.tweenTo("scene4")
    
   //  $('#firstResume').click(() => {
   //    //tl.tweenTo("scene2")

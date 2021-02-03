@@ -14,7 +14,7 @@
 
 var username;
 var user_id;
-var numAsStr = ["one", "two", "three", "four", "five", "six"];
+var numAsStr = ["one", "two", "three", "four", "five"];
 $(document).ready(function () {
   $("select.form-control").multiselect({
     maxHeight: 200,
@@ -42,25 +42,72 @@ $(document).ready(function () {
 
         const res = data.data
        //console.log(res)
+        
+        let html = ``;
 
-        for (let i = 0; i < res.length/6 ; i++){
-          $("#dataForm").append(`<div class="form-row data-section-${numAsStr[i]} form-section row-cols-1"></div>`);
+        for (let i = 0; i < res.length / 6; i++){
           
-
+         
+          //$("#dataForm .append").append(`<div class="form-row data-section-${numAsStr[i]} form-section row-cols-1"></div>`);
+          
+          let inner = ``
           for (let j = i*6; j < i*6 + 6; j++){
                  
-            $(`#dataForm .data-section-${numAsStr[i]}`).append(
-       `     <label for="data_question_${res[j].id}">${res[j].question}</label>
+        
+            inner += `                   <div class="form-group px-3 col">
+        <label for="data_question_${res[j].id}">${res[j].question}</label>
        <input type="text" class="form-control" id="data_question_${res[j].id}" name="data_question_${res[j].id}"  placeholder="Type your answer here eg: Tesla">
      </div>`
-            )
-          }
+          
+          }    
 
-
-             
-     
+          html += `<div class="form-row data-section-${numAsStr[i]} form-section row-cols-1">${inner}</div>`
 
         }
+
+        console.log(html)
+      $("#dataForm").prepend(html);
+
+
+        tl .to(".data-section-one", {opacity: 1, display: 'flex', position: 'relative',}, "scene3")
+        for (i = 0; i < numAsStr.length - 1; i++){
+  
+          const progress = `${32.5 + i*22.5}%`
+        
+          const scene = `scene${i+4}`
+          tl.addLabel(scene)
+          .to('.progress-bar',{ width: progress, duration: 0.2 },scene)
+          .to(".back-arrow",{ opacity: 1, display: 'block',}, scene)
+          .to(`.data-section-${numAsStr[i]} label`, { opacity: 0, x:'100%', display: 'none',}, scene)   
+          .to(`.data-section-${numAsStr[i]}`, { opacity: 0, display: 'none', position:'absolute'}, scene)
+          .to(`.data-section-${numAsStr[i+1]}`, { opacity: 1, display: 'flex', position: 'relative', }, scene)
+           //  .from(`.data-section-${numAsStr[i+1]} label`, { opacity: 0, x:'-100', display: 'block',}, scene)  
+            .to(`.data-section-${numAsStr[i + 1]} label`, { opacity: 1, x: '0', }, "scene4") 
+            .to(window, {
+              scrollTo: 0, onComplete: () => {
+              //  console.log('scrolled-for')
+              }
+            }, scene)
+         
+        }
+        tl.addLabel("scene8")
+.to(".pro-header", { paddingTop:!isDesktop&& '35vw'},"scene8")
+  .to(".hero-section-one", { left: '0vw', width: isDesktop? '41vw': '100vw',  minWidth: isDesktop&&'49rem', height:  isDesktop? '37.9%': '52vw', top: '26.5%' }, "scene8")
+     .to(".hero-block", {backgroundColor: '#F86624', padding: '5.2vh 7.25rem', width: '100%', height: '100%', position: 'relative'},"scene8")
+     .to(".hero-content-four", { opacity: 0, display: 'none', position: 'absolute', }, "scene8")
+     .to(".hero-content-five", { opacity: 1, display: 'block', position: 'static', margin:'auto' }, "scene8")
+  .to(window, {
+    scrollTo: 0,
+    onStart: () => {
+      $('.username').text(username|| "User")
+     },
+    onComplete: () => {
+      //console.log('scrolled')
+    }
+     }, "scene8")
+     .to(".logo path:last-of-type", { fill:'#F86624',}, "scene8")
+     .addLabel("scene9");
+           
 
        // $(".submit-btn").prop("disabled", false);
         // username = data.data.name;
@@ -166,7 +213,7 @@ $(function () {
               else if (!!!data.data.step_four[0]) {
                 console.log('four')
                 navigateTo(3);
-                return     tl.tweenTo("scene4");
+                return   tl.tweenTo("scene4");
            
               }
 
@@ -174,11 +221,11 @@ $(function () {
 
               navigateTo(curIndex() + 1);
               tl.tweenTo(tl.nextLabel());
-              return true;
+            
             } else {
               $(".submit-btn").prop("disabled", false);
               // $('.error-msg').html('Oops!...Something went wrong! Refresh the page and try again');
-              return false;
+              
             }
           }
         );
@@ -192,4 +239,11 @@ $(function () {
       .attr("data-parsley-group", "block-" + index);
   });
   navigateTo(0); // Start at the beginning
+});
+
+
+
+$('#descriptivePhrase').change(function (e) { 
+  e.preventDefault();
+  $('#userNiche').text($('#descriptivePhrase').val())
 });
