@@ -108,20 +108,29 @@
                   <div class="form-row">
                     <div class="form-group px-3 col-md-6">
                       <label class="sr-only" for="name">Name</label>
-                      <input type="text" class="form-control" name="name" data-parsley-error-message="Please enter your name" required id="name" placeholder="Name*">
+                      <input type="text" class="form-control" name="name" data-parsley-error-message="Please enter your name"
+                      data-parsley-minlength="5"
+                      data-parsley-minlength-message="This must be atleast 5 letters" required id="name" placeholder="Name*">
                     </div>
                     <div class="form-group px-3 col-md-6">
                       <label class="sr-only" for="email">Email address</label>
                       <input type="email" class="form-control"  data-parsley-required-message="Please enter your email address" 
-                      data-parsley-type-message="Please enter a valid email address" required name="email" id="email" placeholder="Email address*">      
+                      data-parsley-type-message="Please enter a valid email address"
+                       required name="email" id="email" placeholder="Email address*">      
                     </div>
                  
                   </div>
                   <div class="form-row">            
                     <div class="form-group px-3 col-md-6">
                       <label class="sr-only" for="phone">Phone Number</label>
-                      <input type="tel" class="form-control" data-parsley-type="digits" required 	data-parsley-required data-parsley-required-message="Please enter your phone number"
-                      minlength="8" data-parsley-type-message="Please enter a valid phone number" name="phone" id="phone" placeholder="Phone Number*">
+                      <input class="form-control" type="tel"  name="phone" id="phone" required
+                        data-parsley-type-message="Please enter a valid phone number" 
+                        data-parsley-type="digits"  	
+                        data-parsley-minlength="8"
+                        data-parsley-minlength-message="This must be atleast 8 digits"
+                      data-parsley-required data-parsley-required-message="Please enter your phone number"
+                     
+                     placeholder="Phone Number*">
                     </div>
                     <div class="form-group px-3 col-md-6">
                       <label class="sr-only" for="state">State</label>
