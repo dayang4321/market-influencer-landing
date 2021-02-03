@@ -14,7 +14,7 @@
 
 var username;
 var user_id;
-var numAsStr = ["one", "two", "three", "four", "five"];
+var numAsStr = ["one", "two", "three", "four", "five","six","seven"];
 $(document).ready(function () {
   $("select.form-control").multiselect({
     maxHeight: 200,
@@ -54,23 +54,23 @@ $(document).ready(function () {
           for (let j = i*6; j < i*6 + 6; j++){
                  
         
-            inner += `                   <div class="form-group px-3 col">
+            inner += `<div class="form-group px-3 col">
         <label for="data_question_${res[j].id}">${res[j].question}</label>
        <input type="text" class="form-control" id="data_question_${res[j].id}" name="data_question_${res[j].id}"  placeholder="Type your answer here eg: Tesla">
      </div>`
           
           }    
 
-          html += `<div class="form-row data-section-${numAsStr[i]} form-section row-cols-1">${inner}</div>`
+          html += `<div class="form-row data-section-${numAsStr[i]} row-cols-1">${inner}</div>`
 
         }
 
-        console.log(html)
+      //  console.log(html)
       $("#dataForm").prepend(html);
 
 
         tl .to(".data-section-one", {opacity: 1, display: 'flex', position: 'relative',}, "scene3")
-        for (i = 0; i < numAsStr.length - 1; i++){
+        for (i = 0;i < res.length / 6 - 1; i++){
   
           const progress = `${32.5 + i*22.5}%`
         
@@ -89,13 +89,18 @@ $(document).ready(function () {
               }
             }, scene)
          
+         
         }
-        tl.addLabel("scene8")
-.to(".pro-header", { paddingTop:!isDesktop&& '35vw'},"scene8")
-  .to(".hero-section-one", { left: '0vw', width: isDesktop? '41vw': '100vw',  minWidth: isDesktop&&'49rem', height:  isDesktop? '37.9%': '52vw', top: '26.5%' }, "scene8")
-     .to(".hero-block", {backgroundColor: '#F86624', padding: '5.2vh 7.25rem', width: '100%', height: '100%', position: 'relative'},"scene8")
-     .to(".hero-content-four", { opacity: 0, display: 'none', position: 'absolute', }, "scene8")
-     .to(".hero-content-five", { opacity: 1, display: 'block', position: 'static', margin:'auto' }, "scene8")
+        tl.to('.switch-btn', { opacity: 0, display: 'none' }, `scene${4 + Math.ceil(res.length / 6 - 1)}`)
+        tl.to('.final-submit',{opacity:1, display:'block'}, `scene${4 + Math.ceil(res.length / 6 - 1)}`)
+        const afterScene = `scene${4 + Math.ceil(res.length / 6 - 1)}`
+       // console.log(afterScene)
+        tl.addLabel(afterScene)
+.to(".pro-header", { paddingTop:!isDesktop&& '35vw'},afterScene)
+  .to(".hero-section-one", { left: '0vw', width: isDesktop? '41vw': '100vw',  minWidth: isDesktop&&'49rem', height:  isDesktop? '37.9%': '52vw', top: '26.5%' }, afterScene)
+     .to(".hero-block", {backgroundColor: '#F86624', padding: '5.2vh 7.25rem', width: '100%', height: '100%', position: 'relative'},afterScene)
+     .to(".hero-content-four", { opacity: 0, display: 'none', position: 'absolute', }, afterScene)
+     .to(".hero-content-five", { opacity: 1, display: 'block', position: 'static', margin:'auto' }, afterScene)
   .to(window, {
     scrollTo: 0,
     onStart: () => {
@@ -104,9 +109,9 @@ $(document).ready(function () {
     onComplete: () => {
       //console.log('scrolled')
     }
-     }, "scene8")
-     .to(".logo path:last-of-type", { fill:'#F86624',}, "scene8")
-     .addLabel("scene9");
+     },afterScene)
+     .to(".logo path:last-of-type", { fill:'#F86624',}, afterScene)
+     .addLabel(`scene${4 + Math.ceil(res.length / 6 - 1) + 1}`);
            
 
        // $(".submit-btn").prop("disabled", false);
@@ -147,12 +152,19 @@ $(function () {
 
   // Previous button is easy, just go back
   $(".form-navigation.previous").click(function () {
+   
+
+    if (curIndex() > 2) { 
+      tl.tweenTo(tl.previousLabel());
+      return
+    }
     navigateTo(curIndex() - 1);
     tl.tweenTo(tl.previousLabel());
   });
 
   // Next button goes forward if current block validates
   $(".form-navigation.next").click(function () {
+    const labelsArr = Object.keys(tl.labels)
     $("#mainForm")
       .parsley()
       .whenValidate({
@@ -160,6 +172,92 @@ $(function () {
       })
       .done(function () {
         let dataMap = user_id ? { userinfo_id: user_id } : {};
+
+        console.log(curIndex())
+
+        if (curIndex() > 2) {
+
+       //   navigateTo(curIndex() + 1);
+       
+      
+          console.log(tl.currentLabel())
+
+   
+            $('.final-submit.forward-arrow').click(function (e) { 
+              e.preventDefault();
+              const serial = $(
+                `#${formSectionsArr[curIndex()]} :input`
+              ).serializeArray();
+              console.log(serial);
+
+              dataMap = {
+                ...dataMap,
+                data: [
+                  
+                ]
+              }
+  
+              serial.forEach((obj) => {
+                return (dataMap = {
+                  ...dataMap,
+                  data: [
+                    ...dataMap.data,
+                {
+                      question_id:  +obj.name.replace('data_question_',''),
+                      answer: $(
+                        `#${formSectionsArr[curIndex()]} [name="${obj.name}"]`
+                      ).val(),
+                    }
+                  ]
+             
+                });
+              });
+  
+             console.log(dataMap)
+          
+
+
+
+
+
+
+              $.ajaxSetup({
+                headers: {
+                  "X-AUTHORIZATION":
+                    "75FjrWPZpdlFfGU7Rjv4cKQABaNZgPbs84ELiFWtD5oBhfpCfmo7pnhL8lffZVJN",
+                },
+              });
+              $.post(
+                "https://mip.mealimeter.com/user_info/create-step-" +
+                  numAsStr[curIndex()],
+                { ...dataMap },
+                function (data, status) {
+                  if (data.success) {
+                    $(".submit-btn").prop("disabled", false);    
+                     tl.tweenTo(tl.nextLabel());
+                  
+                  } else {
+                    $(".submit-btn").prop("disabled", false);
+                    // $('.error-msg').html('Oops!...Something went wrong! Refresh the page and try again');
+                    
+                  }
+                }
+              ).fail(function (jqXHR, textStatus, errorThrown) {
+                $(".submit-btn").prop("disabled", false);
+                console.log(textStatus);
+            });
+  
+            });
+          
+           
+          
+
+         
+          tl.tweenTo(tl.nextLabel());
+         
+          return
+        }
+
         console.log(dataMap);
         const serial = $(
           `#${formSectionsArr[curIndex()]} :input`
@@ -206,21 +304,22 @@ $(function () {
               else if (!!!data.data.step_three) {
                 console.log('three')
                 navigateTo(2);
-                return    tl.tweenTo("scene3");
+                return    tl.seek("scene3");
              
               }
 
               else if (!!!data.data.step_four[0]) {
                 console.log('four')
                 navigateTo(3);
-                return   tl.tweenTo("scene4");
+                console.log(curIndex())
+                return   tl.seek("scene4");
            
               }
 
               else
 
-              navigateTo(curIndex() + 1);
-              tl.tweenTo(tl.nextLabel());
+              // navigateTo(curIndex() + 1);
+               tl.seek(labelsArr[labelsArr.length - 1]);
             
             } else {
               $(".submit-btn").prop("disabled", false);
@@ -228,7 +327,10 @@ $(function () {
               
             }
           }
-        );
+        ).fail(function (jqXHR, textStatus, errorThrown) {
+          $(".submit-btn").prop("disabled", false);
+          console.log(textStatus);
+      });
       });
   });
 
@@ -247,3 +349,4 @@ $('#descriptivePhrase').change(function (e) {
   e.preventDefault();
   $('#userNiche').text($('#descriptivePhrase').val())
 });
+

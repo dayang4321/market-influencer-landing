@@ -108,7 +108,7 @@ a:hover{
 .logo{
     position: absolute;
     top: 2vh;
-    min-width: 103px;
+    min-width: 85px;
     width:  8.625rem;
     max-width: 140px;
     z-index: 101;
@@ -539,6 +539,11 @@ font-size: 1.125rem;
     transform: rotateY(180deg);
     opacity: 0;
      display: none
+}
+
+.final-submit{
+    display: none;
+    opacity: 0;
 }
 
 .forward-arrow > img,
