@@ -79,7 +79,7 @@ var numAsStr = ['one', 'two', 'three','four', 'five']
 
 
 
-console.log(tl)
+//console.log(tl)
 
 
 //tl.tweenTo("scene4")

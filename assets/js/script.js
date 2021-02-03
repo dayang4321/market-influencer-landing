@@ -212,15 +212,8 @@ $(function () {
              
                 });
               });
-  
-             console.log(dataMap)
-          
-
-
-
-
-
-
+              $(".final-submit").prop("disabled", true); 
+              //console.log(dataMap)
               $.ajaxSetup({
                 headers: {
                   "X-AUTHORIZATION":
@@ -233,23 +226,21 @@ $(function () {
                 { ...dataMap },
                 function (data, status) {
                   if (data.success) {
-                    $(".submit-btn").prop("disabled", false);    
+                    $(".final-submit").prop("disabled", false);    
                      tl.tweenTo(tl.nextLabel());
                   
                   } else {
-                    $(".submit-btn").prop("disabled", false);
+                    $(".final-submit").prop("disabled", false);
                     // $('.error-msg').html('Oops!...Something went wrong! Refresh the page and try again');
                     
                   }
                 }
               ).fail(function (jqXHR, textStatus, errorThrown) {
-                $(".submit-btn").prop("disabled", false);
+                $(".final-submit").prop("disabled", false);
                 console.log(textStatus);
             });
   
-            });
-          
-           
+            });    
           
 
          
@@ -258,11 +249,11 @@ $(function () {
           return
         }
 
-        console.log(dataMap);
+       // console.log(dataMap);
         const serial = $(
           `#${formSectionsArr[curIndex()]} :input`
         ).serializeArray();
-        console.log(serial);
+      //  console.log(serial);
 
         serial.forEach((obj) => {
           return (dataMap = {
@@ -273,7 +264,7 @@ $(function () {
           });
         });
 
-        console.log(dataMap);
+      //  console.log(dataMap);
 
         // dataSubmit(dataMap, numAsStr[curIndex()]);
 
@@ -296,22 +287,22 @@ $(function () {
 
               if (!!!data.data.step_two) {
                 navigateTo(curIndex() + 1);
-                console.log('two')
+               // console.log('two')
              return   tl.tweenTo("scene2");
                
               }
               
               else if (!!!data.data.step_three) {
-                console.log('three')
+               // console.log('three')
                 navigateTo(2);
                 return    tl.seek("scene3");
              
               }
 
               else if (!!!data.data.step_four[0]) {
-                console.log('four')
+               // console.log('four')
                 navigateTo(3);
-                console.log(curIndex())
+                //console.log(curIndex())
                 return   tl.seek("scene4");
            
               }
